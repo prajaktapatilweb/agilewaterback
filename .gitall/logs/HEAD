@@ -1,0 +1,111 @@
+0000000000000000000000000000000000000000 3fbe09bcb867b8b3db35b27a57f86ca7f2e97d58 Prajakta_Laptop <prajaktaweb@gmail.com> 1688474718 +0530	initial pull
+3fbe09bcb867b8b3db35b27a57f86ca7f2e97d58 3fbe09bcb867b8b3db35b27a57f86ca7f2e97d58 Prajakta_Laptop <prajaktaweb@gmail.com> 1688474903 +0530	checkout: moving from master to Backend
+3fbe09bcb867b8b3db35b27a57f86ca7f2e97d58 3fbe09bcb867b8b3db35b27a57f86ca7f2e97d58 Prajakta_Laptop <prajaktaweb@gmail.com> 1688474910 +0530	checkout: moving from Backend to BackEnd
+3fbe09bcb867b8b3db35b27a57f86ca7f2e97d58 3fbe09bcb867b8b3db35b27a57f86ca7f2e97d58 Prajakta_Laptop <prajaktaweb@gmail.com> 1688475900 +0530	checkout: moving from BackEnd to master
+3fbe09bcb867b8b3db35b27a57f86ca7f2e97d58 3fbe09bcb867b8b3db35b27a57f86ca7f2e97d58 Prajakta_Laptop <prajaktaweb@gmail.com> 1688475927 +0530	checkout: moving from master to BackEnd
+3fbe09bcb867b8b3db35b27a57f86ca7f2e97d58 756c6cc42c2c18f1b0d00a01912a64b66281a32b Prajakta_Laptop <prajaktaweb@gmail.com> 1688475981 +0530	commit: BackEnd Testing
+756c6cc42c2c18f1b0d00a01912a64b66281a32b 3fbe09bcb867b8b3db35b27a57f86ca7f2e97d58 Prajakta_Laptop <prajaktaweb@gmail.com> 1688476004 +0530	checkout: moving from BackEnd to master
+3fbe09bcb867b8b3db35b27a57f86ca7f2e97d58 756c6cc42c2c18f1b0d00a01912a64b66281a32b Prajakta_Laptop <prajaktaweb@gmail.com> 1688476016 +0530	merge BackEnd: Fast-forward
+756c6cc42c2c18f1b0d00a01912a64b66281a32b 0000000000000000000000000000000000000000 Prajakta_Laptop <prajaktaweb@gmail.com> 1688476564 +0530	Branch: renamed refs/heads/master to refs/heads/main
+0000000000000000000000000000000000000000 756c6cc42c2c18f1b0d00a01912a64b66281a32b Prajakta_Laptop <prajaktaweb@gmail.com> 1688476564 +0530	Branch: renamed refs/heads/master to refs/heads/main
+756c6cc42c2c18f1b0d00a01912a64b66281a32b 756c6cc42c2c18f1b0d00a01912a64b66281a32b Prajakta_Laptop <prajaktaweb@gmail.com> 1688476896 +0530	checkout: moving from main to backend
+756c6cc42c2c18f1b0d00a01912a64b66281a32b 756c6cc42c2c18f1b0d00a01912a64b66281a32b Prajakta_Laptop <prajaktaweb@gmail.com> 1688521556 +0530	checkout: moving from backend to main
+756c6cc42c2c18f1b0d00a01912a64b66281a32b 756c6cc42c2c18f1b0d00a01912a64b66281a32b Prajakta_Laptop <prajaktaweb@gmail.com> 1688521794 +0530	checkout: moving from main to backend
+756c6cc42c2c18f1b0d00a01912a64b66281a32b 756c6cc42c2c18f1b0d00a01912a64b66281a32b Prajakta_Laptop <prajaktaweb@gmail.com> 1688522207 +0530	reset: moving to HEAD
+756c6cc42c2c18f1b0d00a01912a64b66281a32b 756c6cc42c2c18f1b0d00a01912a64b66281a32b Prajakta_Laptop <prajaktaweb@gmail.com> 1688522266 +0530	checkout: moving from backend to main
+756c6cc42c2c18f1b0d00a01912a64b66281a32b 756c6cc42c2c18f1b0d00a01912a64b66281a32b Prajakta_Laptop <prajaktaweb@gmail.com> 1688522313 +0530	checkout: moving from main to backend
+756c6cc42c2c18f1b0d00a01912a64b66281a32b 756c6cc42c2c18f1b0d00a01912a64b66281a32b Prajakta_Laptop <prajaktaweb@gmail.com> 1688534761 +0530	reset: moving to HEAD
+756c6cc42c2c18f1b0d00a01912a64b66281a32b 756c6cc42c2c18f1b0d00a01912a64b66281a32b Prajakta_Laptop <prajaktaweb@gmail.com> 1688534779 +0530	checkout: moving from backend to main
+756c6cc42c2c18f1b0d00a01912a64b66281a32b 36525a85c6be817db118bf2ee767656817bab878 Prajakta_Laptop <prajaktaweb@gmail.com> 1688656049 +0530	commit: Backend tested
+36525a85c6be817db118bf2ee767656817bab878 36525a85c6be817db118bf2ee767656817bab878 Prajakta_Laptop <prajaktaweb@gmail.com> 1688656930 +0530	checkout: moving from main to main
+36525a85c6be817db118bf2ee767656817bab878 f5a02264def67b4d1d08908c40bc651d2a532f40 Prajakta_Laptop <prajaktaweb@gmail.com> 1688656957 +0530	commit: Build Error removed
+f5a02264def67b4d1d08908c40bc651d2a532f40 78abf93493e2c765e4ef7fba41705348eceaa6a9 Prajakta_Laptop <prajaktaweb@gmail.com> 1688704114 +0530	commit: Fix Data Table Added
+78abf93493e2c765e4ef7fba41705348eceaa6a9 78abf93493e2c765e4ef7fba41705348eceaa6a9 Prajakta_Laptop <prajaktaweb@gmail.com> 1688705815 +0530	checkout: moving from main to backend
+78abf93493e2c765e4ef7fba41705348eceaa6a9 78abf93493e2c765e4ef7fba41705348eceaa6a9 Prajakta_Laptop <prajaktaweb@gmail.com> 1688705895 +0530	checkout: moving from backend to backend
+78abf93493e2c765e4ef7fba41705348eceaa6a9 78abf93493e2c765e4ef7fba41705348eceaa6a9 Prajakta_Laptop <prajaktaweb@gmail.com> 1688705902 +0530	checkout: moving from backend to main
+78abf93493e2c765e4ef7fba41705348eceaa6a9 51a5a18aafbcd9f1162e1c219061a7a924e5a567 Prajakta_Laptop <prajaktaweb@gmail.com> 1688705921 +0530	pull: Fast-forward
+51a5a18aafbcd9f1162e1c219061a7a924e5a567 51a5a18aafbcd9f1162e1c219061a7a924e5a567 Prajakta_Laptop <prajaktaweb@gmail.com> 1688705940 +0530	checkout: moving from main to backend
+51a5a18aafbcd9f1162e1c219061a7a924e5a567 51a5a18aafbcd9f1162e1c219061a7a924e5a567 Prajakta_Laptop <prajaktaweb@gmail.com> 1688791095 +0530	checkout: moving from backend to frontend
+51a5a18aafbcd9f1162e1c219061a7a924e5a567 51a5a18aafbcd9f1162e1c219061a7a924e5a567 Prajakta_Laptop <prajaktaweb@gmail.com> 1688791415 +0530	checkout: moving from frontend to backend
+51a5a18aafbcd9f1162e1c219061a7a924e5a567 51a5a18aafbcd9f1162e1c219061a7a924e5a567 Prajakta_Laptop <prajaktaweb@gmail.com> 1688831879 +0530	checkout: moving from backend to frontend
+51a5a18aafbcd9f1162e1c219061a7a924e5a567 e09c25405b957aad7bffbda0fdf2505fd0d2342e Prajakta_Laptop <prajaktaweb@gmail.com> 1688832050 +0530	pull https://github.com/prajaktapatilweb/Agilewater.git frontend: Merge made by the 'ort' strategy.
+e09c25405b957aad7bffbda0fdf2505fd0d2342e 51a5a18aafbcd9f1162e1c219061a7a924e5a567 Prajakta_Laptop <prajaktaweb@gmail.com> 1688832133 +0530	checkout: moving from frontend to backend
+51a5a18aafbcd9f1162e1c219061a7a924e5a567 8273ba89eb975dd2b8c7334c9c9114bd7d4f1429 Prajakta_Laptop <prajaktaweb@gmail.com> 1688832182 +0530	commit: Backend Model added
+8273ba89eb975dd2b8c7334c9c9114bd7d4f1429 e09c25405b957aad7bffbda0fdf2505fd0d2342e Prajakta_Laptop <prajaktaweb@gmail.com> 1688832333 +0530	checkout: moving from backend to frontend
+e09c25405b957aad7bffbda0fdf2505fd0d2342e 51a5a18aafbcd9f1162e1c219061a7a924e5a567 Prajakta_Laptop <prajaktaweb@gmail.com> 1688836097 +0530	checkout: moving from frontend to main
+51a5a18aafbcd9f1162e1c219061a7a924e5a567 e09c25405b957aad7bffbda0fdf2505fd0d2342e Prajakta_Laptop <prajaktaweb@gmail.com> 1688836154 +0530	checkout: moving from main to frontend
+e09c25405b957aad7bffbda0fdf2505fd0d2342e 8273ba89eb975dd2b8c7334c9c9114bd7d4f1429 Prajakta_Laptop <prajaktaweb@gmail.com> 1688836383 +0530	checkout: moving from frontend to backend
+8273ba89eb975dd2b8c7334c9c9114bd7d4f1429 e09c25405b957aad7bffbda0fdf2505fd0d2342e Prajakta_Laptop <prajaktaweb@gmail.com> 1688836394 +0530	checkout: moving from backend to frontend
+e09c25405b957aad7bffbda0fdf2505fd0d2342e 8273ba89eb975dd2b8c7334c9c9114bd7d4f1429 Prajakta_Laptop <prajaktaweb@gmail.com> 1688836416 +0530	checkout: moving from frontend to backend
+8273ba89eb975dd2b8c7334c9c9114bd7d4f1429 e09c25405b957aad7bffbda0fdf2505fd0d2342e Prajakta_Laptop <prajaktaweb@gmail.com> 1688836549 +0530	checkout: moving from backend to frontend
+e09c25405b957aad7bffbda0fdf2505fd0d2342e 51a5a18aafbcd9f1162e1c219061a7a924e5a567 Prajakta_Laptop <prajaktaweb@gmail.com> 1688836611 +0530	checkout: moving from frontend to main
+51a5a18aafbcd9f1162e1c219061a7a924e5a567 a219212e14487ef0181acc2995da785475beef90 Prajakta_Laptop <prajaktaweb@gmail.com> 1688836857 +0530	pull origin frontend:frontend: Merge made by the 'ort' strategy.
+a219212e14487ef0181acc2995da785475beef90 e6ac5798ea5bed26a2b66965464e50922bdd4bd6 Prajakta_Laptop <prajaktaweb@gmail.com> 1688836869 +0530	checkout: moving from main to frontend
+e6ac5798ea5bed26a2b66965464e50922bdd4bd6 8273ba89eb975dd2b8c7334c9c9114bd7d4f1429 Prajakta_Laptop <prajaktaweb@gmail.com> 1688837043 +0530	checkout: moving from frontend to backend
+8273ba89eb975dd2b8c7334c9c9114bd7d4f1429 a219212e14487ef0181acc2995da785475beef90 Prajakta_Laptop <prajaktaweb@gmail.com> 1688887192 +0530	checkout: moving from backend to main
+a219212e14487ef0181acc2995da785475beef90 d00cff0614b645c5ef8ace1d8c30aa6473042aa9 Prajakta_Laptop <prajaktaweb@gmail.com> 1688887201 +0530	pull: Merge made by the 'ort' strategy.
+d00cff0614b645c5ef8ace1d8c30aa6473042aa9 8273ba89eb975dd2b8c7334c9c9114bd7d4f1429 Prajakta_Laptop <prajaktaweb@gmail.com> 1688887231 +0530	checkout: moving from main to backend
+8273ba89eb975dd2b8c7334c9c9114bd7d4f1429 2a67da9e45a0f53355c2694dda1e7a480f832636 Prajakta_Laptop <prajaktaweb@gmail.com> 1688887260 +0530	commit: Login Used Display Added
+2a67da9e45a0f53355c2694dda1e7a480f832636 d00cff0614b645c5ef8ace1d8c30aa6473042aa9 Prajakta_Laptop <prajaktaweb@gmail.com> 1688887275 +0530	checkout: moving from backend to main
+d00cff0614b645c5ef8ace1d8c30aa6473042aa9 5f78f0815a1f5a53bb6f7f0defbfd2eb2eb1beff Prajakta_Laptop <prajaktaweb@gmail.com> 1688887339 +0530	merge backend: Merge made by the 'ort' strategy.
+5f78f0815a1f5a53bb6f7f0defbfd2eb2eb1beff 2a67da9e45a0f53355c2694dda1e7a480f832636 Prajakta_Laptop <prajaktaweb@gmail.com> 1688887437 +0530	checkout: moving from main to backend
+2a67da9e45a0f53355c2694dda1e7a480f832636 5f78f0815a1f5a53bb6f7f0defbfd2eb2eb1beff Prajakta_Laptop <prajaktaweb@gmail.com> 1688887444 +0530	checkout: moving from backend to main
+5f78f0815a1f5a53bb6f7f0defbfd2eb2eb1beff 5f78f0815a1f5a53bb6f7f0defbfd2eb2eb1beff Prajakta_Laptop <prajaktaweb@gmail.com> 1688887852 +0530	reset: moving to HEAD
+5f78f0815a1f5a53bb6f7f0defbfd2eb2eb1beff 5f78f0815a1f5a53bb6f7f0defbfd2eb2eb1beff Prajakta_Laptop <prajaktaweb@gmail.com> 1688887853 +0530	reset: moving to HEAD
+5f78f0815a1f5a53bb6f7f0defbfd2eb2eb1beff 5f78f0815a1f5a53bb6f7f0defbfd2eb2eb1beff Prajakta_Laptop <prajaktaweb@gmail.com> 1688888114 +0530	reset: moving to HEAD
+5f78f0815a1f5a53bb6f7f0defbfd2eb2eb1beff 5f78f0815a1f5a53bb6f7f0defbfd2eb2eb1beff Prajakta_Laptop <prajaktaweb@gmail.com> 1688888115 +0530	reset: moving to HEAD
+5f78f0815a1f5a53bb6f7f0defbfd2eb2eb1beff 5f78f0815a1f5a53bb6f7f0defbfd2eb2eb1beff Prajakta_Laptop <prajaktaweb@gmail.com> 1688888224 +0530	reset: moving to HEAD
+5f78f0815a1f5a53bb6f7f0defbfd2eb2eb1beff 5f78f0815a1f5a53bb6f7f0defbfd2eb2eb1beff Prajakta_Laptop <prajaktaweb@gmail.com> 1688888225 +0530	reset: moving to HEAD
+5f78f0815a1f5a53bb6f7f0defbfd2eb2eb1beff a931266380a0c5d7fd7f967ebfdd5d01abcc0f36 Prajakta_Laptop <prajaktaweb@gmail.com> 1688888279 +0530	commit: Testing Image Display Problem 4
+a931266380a0c5d7fd7f967ebfdd5d01abcc0f36 796acc3d716c29b604acd7e02f82f7c9c2233f88 Prajakta_Laptop <prajaktaweb@gmail.com> 1688888785 +0530	commit: Testing Image Display Problem 5
+796acc3d716c29b604acd7e02f82f7c9c2233f88 796acc3d716c29b604acd7e02f82f7c9c2233f88 Prajakta_Laptop <prajaktaweb@gmail.com> 1688888844 +0530	reset: moving to HEAD
+796acc3d716c29b604acd7e02f82f7c9c2233f88 796acc3d716c29b604acd7e02f82f7c9c2233f88 Prajakta_Laptop <prajaktaweb@gmail.com> 1688888844 +0530	reset: moving to HEAD
+796acc3d716c29b604acd7e02f82f7c9c2233f88 796acc3d716c29b604acd7e02f82f7c9c2233f88 Prajakta_Laptop <prajaktaweb@gmail.com> 1688889113 +0530	reset: moving to HEAD
+796acc3d716c29b604acd7e02f82f7c9c2233f88 796acc3d716c29b604acd7e02f82f7c9c2233f88 Prajakta_Laptop <prajaktaweb@gmail.com> 1688889113 +0530	reset: moving to HEAD
+796acc3d716c29b604acd7e02f82f7c9c2233f88 796acc3d716c29b604acd7e02f82f7c9c2233f88 Prajakta_Laptop <prajaktaweb@gmail.com> 1688889368 +0530	reset: moving to HEAD
+796acc3d716c29b604acd7e02f82f7c9c2233f88 796acc3d716c29b604acd7e02f82f7c9c2233f88 Prajakta_Laptop <prajaktaweb@gmail.com> 1688889368 +0530	reset: moving to HEAD
+796acc3d716c29b604acd7e02f82f7c9c2233f88 ba1d219203ac399e542f4704fea0fc7feee37302 Prajakta_Laptop <prajaktaweb@gmail.com> 1688889421 +0530	commit: Testing Image Display Problem 8
+ba1d219203ac399e542f4704fea0fc7feee37302 ee679ca5daa1f93e7e21d40aa7c8b63dae931ae1 Prajakta_Laptop <prajaktaweb@gmail.com> 1688890795 +0530	commit: Testing Image Display Problem 9
+ee679ca5daa1f93e7e21d40aa7c8b63dae931ae1 c69f0efa361911fedf189964fa5639120669bccd Prajakta_Laptop <prajaktaweb@gmail.com> 1688891687 +0530	commit: Testing Image Display Problem 10
+c69f0efa361911fedf189964fa5639120669bccd f9538f2e3150bea149a61c2c713774be50df7287 Prajakta_Laptop <prajaktaweb@gmail.com> 1688893062 +0530	commit: Testing Image Display Problem 11
+f9538f2e3150bea149a61c2c713774be50df7287 54977a98fbebd6d30c972759ceff6c5d8c5b58bb Prajakta_Laptop <prajaktaweb@gmail.com> 1688894427 +0530	commit: Testing Image Display Problem 12
+54977a98fbebd6d30c972759ceff6c5d8c5b58bb 6afdfb0c7969d4039680ce323ad51ffa0362e898 Prajakta_Laptop <prajaktaweb@gmail.com> 1688894792 +0530	commit: Testing Image Display Problem 13
+6afdfb0c7969d4039680ce323ad51ffa0362e898 8ddb5b0acddbe9cf92365d5cb7e81a5601cfc816 Prajakta_Laptop <prajaktaweb@gmail.com> 1688894957 +0530	commit: Testing Image Display Problem 14
+8ddb5b0acddbe9cf92365d5cb7e81a5601cfc816 d6362056dda494a982ab5f4b2e12a2c8a3f56a50 Prajakta_Laptop <prajaktaweb@gmail.com> 1688895242 +0530	commit: Testing Image Display Problem 15
+d6362056dda494a982ab5f4b2e12a2c8a3f56a50 0487ec8e5207555b103c2d9a5eff7bd61591b691 Prajakta_Laptop <prajaktaweb@gmail.com> 1688896937 +0530	commit: Fixed Footer Header Updated
+0487ec8e5207555b103c2d9a5eff7bd61591b691 825d56b8c6d1cffafca860edad365739a27f47b8 Prajakta_Laptop <prajaktaweb@gmail.com> 1688899127 +0530	commit: Fixed Footer Header Updated WApp arranged
+825d56b8c6d1cffafca860edad365739a27f47b8 e6ac5798ea5bed26a2b66965464e50922bdd4bd6 Prajakta_Laptop <prajaktaweb@gmail.com> 1688899353 +0530	checkout: moving from main to frontend
+e6ac5798ea5bed26a2b66965464e50922bdd4bd6 825d56b8c6d1cffafca860edad365739a27f47b8 Prajakta_Laptop <prajaktaweb@gmail.com> 1688899410 +0530	merge main: Fast-forward
+825d56b8c6d1cffafca860edad365739a27f47b8 2a67da9e45a0f53355c2694dda1e7a480f832636 Prajakta_Laptop <prajaktaweb@gmail.com> 1688899534 +0530	checkout: moving from frontend to backend
+2a67da9e45a0f53355c2694dda1e7a480f832636 2a67da9e45a0f53355c2694dda1e7a480f832636 Prajakta_Laptop <prajaktaweb@gmail.com> 1688899630 +0530	checkout: moving from backend to backend
+2a67da9e45a0f53355c2694dda1e7a480f832636 825d56b8c6d1cffafca860edad365739a27f47b8 Prajakta_Laptop <prajaktaweb@gmail.com> 1688899730 +0530	checkout: moving from backend to frontend
+825d56b8c6d1cffafca860edad365739a27f47b8 2a67da9e45a0f53355c2694dda1e7a480f832636 Prajakta_Laptop <prajaktaweb@gmail.com> 1688900211 +0530	checkout: moving from frontend to backend
+2a67da9e45a0f53355c2694dda1e7a480f832636 03fe3a47b226439ae52de69029ab15df67aa51d7 Prajakta_Laptop <prajaktaweb@gmail.com> 1689348844 +0530	commit: Forebase Login & JWT Login Completed
+03fe3a47b226439ae52de69029ab15df67aa51d7 03fe3a47b226439ae52de69029ab15df67aa51d7 Prajakta_Laptop <prajaktaweb@gmail.com> 1690041934 +0530	reset: moving to HEAD
+03fe3a47b226439ae52de69029ab15df67aa51d7 03fe3a47b226439ae52de69029ab15df67aa51d7 Prajakta_Laptop <prajaktaweb@gmail.com> 1690041934 +0530	reset: moving to HEAD
+03fe3a47b226439ae52de69029ab15df67aa51d7 03fe3a47b226439ae52de69029ab15df67aa51d7 Prajakta_Laptop <prajaktaweb@gmail.com> 1690042862 +0530	reset: moving to HEAD
+03fe3a47b226439ae52de69029ab15df67aa51d7 03fe3a47b226439ae52de69029ab15df67aa51d7 Prajakta_Laptop <prajaktaweb@gmail.com> 1690042863 +0530	reset: moving to HEAD
+03fe3a47b226439ae52de69029ab15df67aa51d7 03fe3a47b226439ae52de69029ab15df67aa51d7 Prajakta_Laptop <prajaktaweb@gmail.com> 1690043256 +0530	reset: moving to HEAD
+03fe3a47b226439ae52de69029ab15df67aa51d7 03fe3a47b226439ae52de69029ab15df67aa51d7 Prajakta_Laptop <prajaktaweb@gmail.com> 1690043256 +0530	reset: moving to HEAD
+03fe3a47b226439ae52de69029ab15df67aa51d7 03fe3a47b226439ae52de69029ab15df67aa51d7 Prajakta_Laptop <prajaktaweb@gmail.com> 1690043285 +0530	reset: moving to HEAD
+03fe3a47b226439ae52de69029ab15df67aa51d7 03fe3a47b226439ae52de69029ab15df67aa51d7 Prajakta_Laptop <prajaktaweb@gmail.com> 1690043286 +0530	reset: moving to HEAD
+03fe3a47b226439ae52de69029ab15df67aa51d7 03fe3a47b226439ae52de69029ab15df67aa51d7 Prajakta_Laptop <prajaktaweb@gmail.com> 1690043374 +0530	reset: moving to HEAD
+03fe3a47b226439ae52de69029ab15df67aa51d7 03fe3a47b226439ae52de69029ab15df67aa51d7 Prajakta_Laptop <prajaktaweb@gmail.com> 1690043374 +0530	reset: moving to HEAD
+03fe3a47b226439ae52de69029ab15df67aa51d7 a16bbd96fc2eb0982f354f44f7b4ac1f67a8c6d5 Prajakta_Laptop <prajaktaweb@gmail.com> 1690043588 +0530	commit: Add New Course Done 1
+a16bbd96fc2eb0982f354f44f7b4ac1f67a8c6d5 825d56b8c6d1cffafca860edad365739a27f47b8 Prajakta_Laptop <prajaktaweb@gmail.com> 1690044085 +0530	checkout: moving from backend to main
+825d56b8c6d1cffafca860edad365739a27f47b8 d8c0d24bc0b27a75d44707b6a5f9713f6cdf8306 Prajakta_Laptop <prajaktaweb@gmail.com> 1690044362 +0530	pull: Fast-forward
+d8c0d24bc0b27a75d44707b6a5f9713f6cdf8306 81194231367f2e95e65b1080ee09b6b792128148 Prajakta_Laptop <prajaktaweb@gmail.com> 1690044737 +0530	merge backend: Merge made by the 'ort' strategy.
+81194231367f2e95e65b1080ee09b6b792128148 a16bbd96fc2eb0982f354f44f7b4ac1f67a8c6d5 Prajakta_Laptop <prajaktaweb@gmail.com> 1690044906 +0530	checkout: moving from main to backend
+a16bbd96fc2eb0982f354f44f7b4ac1f67a8c6d5 81194231367f2e95e65b1080ee09b6b792128148 Prajakta_Laptop <prajaktaweb@gmail.com> 1690044913 +0530	merge main: Fast-forward
+81194231367f2e95e65b1080ee09b6b792128148 81194231367f2e95e65b1080ee09b6b792128148 Prajakta_Laptop <prajaktaweb@gmail.com> 1690046682 +0530	checkout: moving from backend to main
+81194231367f2e95e65b1080ee09b6b792128148 81194231367f2e95e65b1080ee09b6b792128148 Prajakta_Laptop <prajaktaweb@gmail.com> 1690046718 +0530	checkout: moving from main to backend
+81194231367f2e95e65b1080ee09b6b792128148 1f6b3e6f7173b708c2c8e1f60a03e3c08058fec5 Prajakta_Laptop <prajaktaweb@gmail.com> 1690046748 +0530	commit: BaseURL added for dev and prd
+1f6b3e6f7173b708c2c8e1f60a03e3c08058fec5 81194231367f2e95e65b1080ee09b6b792128148 Prajakta_Laptop <prajaktaweb@gmail.com> 1690046788 +0530	checkout: moving from backend to main
+81194231367f2e95e65b1080ee09b6b792128148 1f6b3e6f7173b708c2c8e1f60a03e3c08058fec5 Prajakta_Laptop <prajaktaweb@gmail.com> 1690046793 +0530	merge backend: Fast-forward
+1f6b3e6f7173b708c2c8e1f60a03e3c08058fec5 1f6b3e6f7173b708c2c8e1f60a03e3c08058fec5 Prajakta_Laptop <prajaktaweb@gmail.com> 1690050246 +0530	checkout: moving from main to backend
+1f6b3e6f7173b708c2c8e1f60a03e3c08058fec5 1f6b3e6f7173b708c2c8e1f60a03e3c08058fec5 Prajakta_Laptop <prajaktaweb@gmail.com> 1690050330 +0530	checkout: moving from backend to main
+1f6b3e6f7173b708c2c8e1f60a03e3c08058fec5 1f6b3e6f7173b708c2c8e1f60a03e3c08058fec5 Prajakta_Laptop <prajaktaweb@gmail.com> 1690084178 +0530	reset: moving to HEAD
+1f6b3e6f7173b708c2c8e1f60a03e3c08058fec5 550f375936a71eb1dc2cf383ce1b82cae1445ceb Prajakta_Laptop <prajaktaweb@gmail.com> 1690084193 +0530	pull: Fast-forward
+550f375936a71eb1dc2cf383ce1b82cae1445ceb 1f6b3e6f7173b708c2c8e1f60a03e3c08058fec5 Prajakta_Laptop <prajaktaweb@gmail.com> 1690084231 +0530	checkout: moving from main to backend
+1f6b3e6f7173b708c2c8e1f60a03e3c08058fec5 550f375936a71eb1dc2cf383ce1b82cae1445ceb Prajakta_Laptop <prajaktaweb@gmail.com> 1690084238 +0530	merge main: Fast-forward
+550f375936a71eb1dc2cf383ce1b82cae1445ceb 49d63c58a5b646874893b917571df1e5712ad244 Prajakta_Laptop <prajaktaweb@gmail.com> 1690084281 +0530	commit: Package.json changed added script for start

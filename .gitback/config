@@ -8,3 +8,6 @@
 [remote "origin"]
 	url = https://github.com/prajaktapatilweb/agilewaterback.git
 	fetch = +refs/heads/*:refs/remotes/origin/*
+[branch "backend"]
+	remote = origin
+	merge = refs/heads/backend

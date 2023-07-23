@@ -13,8 +13,6 @@
 /.idea/workspace.xml
 /.idea/*
 /.next
-/.gitback
-/.gitall
 
 # testing
 /coverage

@@ -1,9 +1,0 @@
-0000000000000000000000000000000000000000 51a5a18aafbcd9f1162e1c219061a7a924e5a567 Prajakta_Laptop <prajaktaweb@gmail.com> 1688705940 +0530	branch: Created from HEAD
-51a5a18aafbcd9f1162e1c219061a7a924e5a567 8273ba89eb975dd2b8c7334c9c9114bd7d4f1429 Prajakta_Laptop <prajaktaweb@gmail.com> 1688832182 +0530	commit: Backend Model added
-8273ba89eb975dd2b8c7334c9c9114bd7d4f1429 2a67da9e45a0f53355c2694dda1e7a480f832636 Prajakta_Laptop <prajaktaweb@gmail.com> 1688887260 +0530	commit: Login Used Display Added
-2a67da9e45a0f53355c2694dda1e7a480f832636 03fe3a47b226439ae52de69029ab15df67aa51d7 Prajakta_Laptop <prajaktaweb@gmail.com> 1689348844 +0530	commit: Forebase Login & JWT Login Completed
-03fe3a47b226439ae52de69029ab15df67aa51d7 a16bbd96fc2eb0982f354f44f7b4ac1f67a8c6d5 Prajakta_Laptop <prajaktaweb@gmail.com> 1690043588 +0530	commit: Add New Course Done 1
-a16bbd96fc2eb0982f354f44f7b4ac1f67a8c6d5 81194231367f2e95e65b1080ee09b6b792128148 Prajakta_Laptop <prajaktaweb@gmail.com> 1690044913 +0530	merge main: Fast-forward
-81194231367f2e95e65b1080ee09b6b792128148 1f6b3e6f7173b708c2c8e1f60a03e3c08058fec5 Prajakta_Laptop <prajaktaweb@gmail.com> 1690046748 +0530	commit: BaseURL added for dev and prd
-1f6b3e6f7173b708c2c8e1f60a03e3c08058fec5 550f375936a71eb1dc2cf383ce1b82cae1445ceb Prajakta_Laptop <prajaktaweb@gmail.com> 1690084238 +0530	merge main: Fast-forward
-550f375936a71eb1dc2cf383ce1b82cae1445ceb 49d63c58a5b646874893b917571df1e5712ad244 Prajakta_Laptop <prajaktaweb@gmail.com> 1690084281 +0530	commit: Package.json changed added script for start

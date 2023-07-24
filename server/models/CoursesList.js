@@ -62,7 +62,7 @@ const CoursesListSchema = new mongoose.Schema({
         default: Date.now,
       },
       Updates: {
-        type: String,
+        type: Array,
       },
     },
   ],

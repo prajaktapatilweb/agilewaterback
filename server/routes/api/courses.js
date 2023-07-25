@@ -100,6 +100,8 @@ router.get("/getcourslist", auth, async (req, res) => {
 
 router.get("/getindividualcourse", async (req, res) => {
   console.log("In request Get Indiv Course Data ", req.query);
+  res.setHeader("Access-Control-Allow-Origin", "*");
+
   try {
     let CourseData = await CoursesList.findOne(
       { CourseID: req.query.CourseID },

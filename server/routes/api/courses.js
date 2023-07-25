@@ -24,7 +24,6 @@ async function updateStatus(req, res) {
 }
 async function getCoursList(req, res) {
   console.log('In get Course List')
-  res.setHeader("Access-Control-Allow-Origin", "*");
   let NewList = await CoursesList.aggregate([
     { $match: { Status: "Active" } },
     {
@@ -91,6 +90,7 @@ async function getCoursList(req, res) {
 }
 router.get("/getcourslist", auth, async (req, res) => {
   console.log("In request Get Course List ");
+  res.setHeader("Access-Control-Allow-Origin", "*");
   try {
     updateStatus();
     getCoursList(req, res);

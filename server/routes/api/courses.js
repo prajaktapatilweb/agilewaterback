@@ -90,7 +90,7 @@ async function getCoursList(req, res) {
 router.get("/getcourslist", auth, async (req, res) => {
   console.log("In request Get Course List ");
   try {
-    updateStatus();
+    // updateStatus();
     getCoursList(req, res);
   } catch (err) {
     // logger.error(`Catch Block - User List Request Block ${err}`, { by: req.user.gid, for: [0], info: {} })

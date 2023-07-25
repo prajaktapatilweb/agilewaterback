@@ -23,6 +23,8 @@ async function updateStatus(req, res) {
   }
 }
 async function getCoursList(req, res) {
+  console.log('In get Course List')
+  res.setHeader("Access-Control-Allow-Origin", "*");
   let NewList = await CoursesList.aggregate([
     { $match: { Status: "Active" } },
     {

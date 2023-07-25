@@ -87,11 +87,11 @@ async function getCoursList(req, res) {
 
   return res.status(200).json({ List: NewList });
 }
-router.get("/getcourslist", auth,async (req, res) => {
+router.get("/getcourslist", auth, async (req, res) => {
   console.log("In request Get Course List ");
   try {
     updateStatus();
-    getCoursList(req,res)
+    getCoursList(req, res);
   } catch (err) {
     // logger.error(`Catch Block - User List Request Block ${err}`, { by: req.user.gid, for: [0], info: {} })
     return res.status(500).json({ error: `Server Error: ${err}` });
@@ -201,7 +201,7 @@ router.put("/updatecourse/:CourseID", auth, async (req, res) => {
         .then(async () => {
           let enterData = await CoursesList.findOne({ CourseID });
           console.log("The renter data", enterData);
-          getCoursList(req,res)
+          getCoursList(req, res);
         })
         .catch((err) => {
           console.log("errr", err);
@@ -215,6 +215,29 @@ router.put("/updatecourse/:CourseID", auth, async (req, res) => {
     console.log("errr", err);
     // logger.error(`Catch Block - User List Request Block ${err}`, { by: req.user.gid, for: [0], info: {} })
     return res.status(500).json({ error: `Server Error: ${err}` });
+  }
+});
+
+router.delete("/DeleteCourse/:CourseID", auth, async (req, res) => {
+  console.log("In Delete Course", req.params, req.query);
+  try {
+    const deleteCourse = req.params.CourseID;
+    await CoursesList.updateOne(
+      { CourseID: CourseID },
+      {
+        $set: {
+          Status: "Deleted",
+          "Deletion.ByID": req.user.gid,
+          "Deletion.ByName": req.user.gid,
+          "Deletion.OnDate": new Date(),
+          "Deletion.DeleteReason": req.user.gid,
+        },
+      }
+    );
+
+    getCoursList(req, res);
+  } catch (err) {
+    CatchBlok(req, res, "Delete Teacher Monthly Salary Data", err);
   }
 });
 module.exports = router;

@@ -44,7 +44,11 @@ app.use('/api/studentdata', require('./server/routes/api/googleSheetCourse'));
 app.use('/api/courses', require('./server/routes/api/courses'));
 app.use('/api/auth', require('./server/routes/api/auth'));
 
-app.listen(PORT, (err) => {
+app.get('/', (req, res) => {
+  res.header('Content-type', 'text/html');
+  return res.end('<h1>I said "Oh my!" What a marvelous tune!!!</h1>');
+ });
+ app.listen(PORT, (err) => {
   if (err) {
     console.log({err});
   }

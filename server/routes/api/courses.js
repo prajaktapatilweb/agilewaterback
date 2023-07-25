@@ -87,12 +87,11 @@ async function getCoursList(req, res) {
 
   return res.status(200).json({ List: NewList });
 }
-router.get("/getcourslist", async (req, res) => {
-  // router.get("/getcourslist", auth, async (req, res) => {
+router.get("/getcourslist", auth,async (req, res) => {
   console.log("In request Get Course List ");
   try {
     updateStatus();
-    getCoursList(req, res);
+    getCoursList(req,res)
   } catch (err) {
     // logger.error(`Catch Block - User List Request Block ${err}`, { by: req.user.gid, for: [0], info: {} })
     return res.status(500).json({ error: `Server Error: ${err}` });
@@ -100,7 +99,6 @@ router.get("/getcourslist", async (req, res) => {
 });
 
 router.get("/getindividualcourse", async (req, res) => {
-  // router.get("/getindividualcourse", auth, async (req, res) => {
   console.log("In request Get Indiv Course Data ", req.query);
   try {
     let CourseData = await CoursesList.findOne(
@@ -128,8 +126,7 @@ router.get("/getindividualcourse", async (req, res) => {
   }
 });
 
-router.post("/addnewcourse", async (req, res) => {
-  // router.post("/addnewcourse", auth, async (req, res) => {
+router.post("/addnewcourse", auth, async (req, res) => {
   console.log("In add new Course router post request");
   try {
     const data = req.body.data;
@@ -138,10 +135,8 @@ router.post("/addnewcourse", async (req, res) => {
     data.CourseID = `ID-${totalNumber}`;
 
     data.Created = {};
-    // data.Created.ByID = req.user.gid;
-    data.Created.ByID = "AW-111";
-    data.Created.ByName = "Admin";
-    // data.Created.ByName = req.user.name;
+    data.Created.ByID = req.user.gid;
+    data.Created.ByName = req.user.name;
     FinalData = new CoursesList(data);
     console.log("Final Data", FinalData);
     await FinalData.save()
@@ -158,8 +153,7 @@ router.post("/addnewcourse", async (req, res) => {
   }
 });
 
-router.put("/updatecourse/:CourseID", async (req, res) => {
-  // router.put("/updatecourse/:CourseID", auth, async (req, res) => {
+router.put("/updatecourse/:CourseID", auth, async (req, res) => {
   console.log("In request Update Indiv Course Data ", req.params, req.body);
   try {
     const CourseID = req.params.CourseID;
@@ -195,8 +189,8 @@ router.put("/updatecourse/:CourseID", async (req, res) => {
           $push: {
             Updation: [
               {
-                ByID: "req.user.gid",
-                ByName: "req.user.name",
+                ByID: req.user.gid,
+                ByName: req.user.name,
                 OnDate: new Date(),
                 Updates: updatedThings,
               },
@@ -207,7 +201,7 @@ router.put("/updatecourse/:CourseID", async (req, res) => {
         .then(async () => {
           let enterData = await CoursesList.findOne({ CourseID });
           console.log("The renter data", enterData);
-          getCoursList(req, res);
+          getCoursList(req,res)
         })
         .catch((err) => {
           console.log("errr", err);

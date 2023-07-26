@@ -23,7 +23,7 @@ async function updateStatus(req, res) {
   }
 }
 async function getCoursList(req, res) {
-  console.log('In get Course List')
+  console.log("In get Course List");
   let NewList = await CoursesList.aggregate([
     { $match: { Status: "Active" } },
     {
@@ -145,7 +145,9 @@ router.post("/addnewcourse", auth, async (req, res) => {
     console.log("Final Data", FinalData);
     await FinalData.save()
       .then(() => {
-        return res.status(200).json({ data: "Success" });
+        getCoursList(req, res);
+
+        // return res.status(200).json({ data: "Success" });
       })
       .catch((err) => {
         console.log("Errot", err);

@@ -143,11 +143,10 @@ router.post("/addnewcourse", auth, async (req, res) => {
     data.Created.ByName = req.user.name;
     FinalData = new CoursesList(data);
     console.log("Final Data", FinalData);
+    let CourseData = await CoursesList.findOne({ CourseID: 'ID-2' });
     await FinalData.save()
       .then(() => {
-        getCoursList(req, res);
-
-        // return res.status(200).json({ data: "Success" });
+        return res.status(200).json({ data: "Success", CourseData: CourseData });
       })
       .catch((err) => {
         console.log("Errot", err);

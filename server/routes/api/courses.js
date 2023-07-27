@@ -206,10 +206,70 @@ router.post("/addnewcourse", auth, async (req, res) => {
     data.Created.ByName = req.user.name;
     FinalData = new CoursesList(data);
     console.log("Final Data", FinalData);
-    let CourseData = await CoursesList.findOne({ CourseID: "ID-2" });
+    // let CourseData = await CoursesList.findOne({ CourseID: "ID-2" });
+    let NewList = await CoursesList.aggregate([
+      { $match: { Status: "Active" } },
+      {
+        $project: {
+          _id: 0,
+          CourseID: 1,
+          SdateParts: { $dateToParts: { date: "$StartDate" } },
+          EdateParts: { $dateToParts: { date: "$EndDate" } },
+          CourseName: 1,
+          EventDeleteDate: 1,
+          Place: 1,
+          Cost: 1,
+          Date: 1,
+          Time: 1,
+          Trainer: 1,
+        },
+      },
+      {
+        $addFields: {
+          Date: {
+            $function: {
+              body: function (StartDate, EndDate) {
+                let mlst = [, "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Sep", "Nov", "Dec"];
+                let Eyear = `${EndDate.year}`.slice(2, 4);
+                let Syear = `${StartDate.year}`.slice(2, 4);
+                let datefinal =
+                  StartDate.year === EndDate.year
+                    ? StartDate.month === EndDate.month
+                      ? `${StartDate.day} - ${EndDate.day} ${mlst[EndDate.month]} ${Eyear}`
+                      : `${StartDate.day} ${mlst[StartDate.month]} - ${EndDate.day} ${mlst[EndDate.month]} ${Eyear}`
+                    : `${StartDate.day} ${mlst[StartDate.month]} ${Syear}- ${EndDate.day} ${mlst[EndDate.month]} ${Eyear}`;
+
+                return datefinal;
+              },
+              args: ["$SdateParts", "$EdateParts"],
+              lang: "js",
+            },
+          },
+        },
+      },
+      {
+        $project: {
+          CourseID: 1,
+          CourseName: 1,
+          Place: 1,
+          Cost: 1,
+          Date: 1,
+          Time: 1,
+          Trainer: 1,
+          // isExpired: {
+          //   // new field
+          //   $cond: {
+          //     if: { $gt: ["$EventDeleteDate", new Date()] },
+          //     then: false,
+          //     else: true,
+          //   },
+          // },
+        },
+      },
+    ]);
     await FinalData.save()
       .then(() => {
-        return res.status(200).json({ data: "Success", CourseData: CourseData });
+        return res.status(200).json({ data: "Success", NewList: NewList });
       })
       .catch((err) => {
         console.log("Errot", err);

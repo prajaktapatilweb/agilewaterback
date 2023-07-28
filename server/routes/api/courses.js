@@ -208,7 +208,7 @@ router.put("/updatecourse/:CourseID", auth, async (req, res) => {
         {
           $set: newData,
           $push: {
-            Updation: [
+            Updation: [ 
               {
                 ByID: req.user.gid,
                 ByName: req.user.name,

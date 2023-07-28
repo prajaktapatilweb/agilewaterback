@@ -115,6 +115,7 @@ async function getCoursList(req, res) {
 router.get('/getcourslist', auth, async (req, res) => {
   console.log('In request Get Course List ');
   res.setHeader('Access-Control-Allow-Origin', '*');
+  console.log('In request Get Course List 2');
   try {
     // updateStatus();
     // getCoursList(req, res);
@@ -204,6 +205,7 @@ router.get('/getcourslist', auth, async (req, res) => {
     return res.status(200).json({List: NewList});
   } catch (err) {
     // logger.error(`Catch Block - User List Request Block ${err}`, { by: req.user.gid, for: [0], info: {} })
+    console.log('Error ',err)
     return res.status(500).json({error: `Server Error: ${err}`});
   }
 });

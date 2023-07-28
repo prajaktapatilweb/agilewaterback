@@ -24,9 +24,11 @@ const CoursesListSchema = new mongoose.Schema({
   Time: {
     type: String,
   },
-  Cost: {
-    Actual: {type: Number},
-    Discounted: {type: Number},
+  ActualCost: {
+    type: Number,
+  },
+  DiscountedCost: {
+    type: Number,
   },
   Trainer: {
     type: String,
@@ -62,7 +64,7 @@ const CoursesListSchema = new mongoose.Schema({
         default: Date.now,
       },
       Updates: {
-        type: Array,
+        type: String,
       },
     },
   ],

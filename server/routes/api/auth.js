@@ -238,7 +238,7 @@ router.post(
               // config.get('jwtSecret'),
               {expiresIn: '1 day'},
               (err, token) => {
-                console.log('Error', err, 'TTT', token);
+                // console.log('Error', err, 'TTT', token);
                 if (err) throw err;
                 logger.notify(`Login Succesful by ${user.UserID}`, {
                   Action: 'UserSignIn',

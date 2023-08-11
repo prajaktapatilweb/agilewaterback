@@ -42,6 +42,7 @@ app.use(helmet());
 // Define Route
 app.use('/api/studentdata', require('./server/routes/api/googleSheetCourse'));
 app.use('/api/courses', require('./server/routes/api/courses'));
+app.use('/api/coaches', require('./server/routes/api/coaches'));
 app.use('/api/auth', require('./server/routes/api/auth'));
 
 app.get('/', (req, res) => {

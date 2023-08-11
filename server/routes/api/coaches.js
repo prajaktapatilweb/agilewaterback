@@ -1,27 +1,13 @@
 const express = require("express");
-const { getAuthToken, getSpreadSheetValues } = require("../../Database/googleSheetsService");
 const { indexof } = require("stylis");
 const auth = require("../../middleware/auth");
 const CoursesList = require("../../models/CoursesList");
 const router = express.Router();
 const moment = require("moment");
+const CoachesList = require("../../models/CoachesList");
+const uploadController = require("../../middleware/uploadMultipleFiles");
 
-async function updateStatus(req, res) {
-  try {
-    console.log("In Update Status function");
-    CoursesList.bulkWrite([
-      {
-        updateMany: {
-          filter: { EventDeleteDate: { $lt: new Date() } },
-          update: { $set: { Status: "Expired" } },
-        },
-      },
-    ]);
-  } catch (err) {
-    console.error(err.message);
-    // return res.status(500).json({ UserData: "Server Error" });
-  }
-}
+
 async function getCoursList(req, res) {
   console.log("In get Course List");
   let NewList = await CoursesList.aggregate([
@@ -90,16 +76,14 @@ async function getCoursList(req, res) {
 
   return res.status(200).json({ List: NewList });
 }
-router.get("/getcourslist", auth, async (req, res) => {
-  console.log("In request Get Course List ");
-  res.setHeader("Access-Control-Allow-Origin", "*");
-  console.log("In request Get Course List 2");
+router.get("/getcoachlist", auth, async (req, res) => {
+  console.log("In request Get Coach List ");
   try {
     // updateStatus();
-    getCoursList(req, res);
-    // let NewList = await CoursesList.find({ Status: "Active" });
-    // console.log("first", NewList.length);
-    // return res.status(200).json({ List: NewList });
+    // getCoursList(req, res);
+    let NewList = await CoachesList.find({ Status: "Active" });
+    console.log("first", NewList.length);
+    return res.status(200).json({ List: NewList });
   } catch (err) {
     // logger.error(`Catch Block - User List Request Block ${err}`, { by: req.user.gid, for: [0], info: {} })
     console.log("Error ", err);
@@ -138,29 +122,41 @@ router.get("/getindividualcourse", async (req, res) => {
   }
 });
 
-router.post("/addnewcourse", auth, async (req, res) => {
+router.post("/addnewcoach", auth, async (req, res) => {
   console.log("In add new Course router post request");
   try {
-    const data = req.body.data;
-    let totalNumber = await CoursesList.countDocuments();
-    totalNumber = totalNumber >= 1 ? totalNumber + 1 : 1;
-    data.CourseID = `ID-${totalNumber}`;
+    uploadController.multipleUpload(req, res, function (err) {
+      if (err) {
+        console.log("Error Photo Submission", err);
+        return res.end("Error uploading file.");
+      }
+      const CoachID = req.params.ID;
+      const data = req.body;
+      async function asyncCall() {
+        let totalNumber = await CoachesList.countDocuments();
+        totalNumber = totalNumber >= 1 ? totalNumber + 1 : 1;
+        data.CoachID = `ID-${totalNumber}`;
+        data.Avatar = req.Avatar;
 
-    data.Created = {};
-    data.Created.ByID = req.user.gid;
-    data.Created.ByName = req.user.name;
-    FinalData = new CoursesList(data);
-    console.log("Final Data", FinalData);
-    await FinalData.save()
-      .then(() => {
-        return res.status(200).json({ data: "Success" });
-      })
-      .catch((err) => {
-        console.log("Errot", err);
-        return res.status(500).json({ error: `Problem in Storing to MongoDB: ${err}` });
-      });
+        data.Created = {};
+        data.Created.ByID = req.user.gid;
+        data.Created.ByName = req.user.name;
+
+        FinalData = new CoachesList(data);
+        console.log("Final Data", FinalData);
+        await FinalData.save()
+          .then(() => {
+            return res.status(200).json({ data: "Success" });
+          })
+          .catch((err) => {
+            console.log("Errot", err);
+            return res.status(500).json({ error: `Problem in Storing to MongoDB: ${err}` });
+          });
+      }
+      asyncCall();
+    });
   } catch (err) {
-    console.log("Errot", err);
+    console.log("Error", err);
     return res.status(500).json({ error: `Server Error: ${err}` });
   }
 });
@@ -207,7 +203,7 @@ router.put("/updatecourse/:CourseID", auth, async (req, res) => {
         {
           $set: newData,
           $push: {
-            Updation: [ 
+            Updation: [
               {
                 ByID: req.user.gid,
                 ByName: req.user.name,
@@ -261,4 +257,44 @@ router.delete("/DeleteCourse/:CourseID", auth, async (req, res) => {
     return res.status(500).json({ error: `Server Error: ${err}` });
   }
 });
+
+// router.put("/photo/:ID", auth, async (req, res) => {
+//   console.log("Back to Photo Update ");
+//   uploadController.multipleUpload(req, res, function (err) {
+//     if (err) {
+//       console.log("Error Photo Submission", err);
+//       return res.end("Error uploading file.");
+//     }
+//     console.log("Main Func", req.body);
+//     const CoachID = req.params.ID || "ID-6";
+//     console.log({ CoachID }, req.Avatar);
+//     try {
+//       async function asyncCall() {
+//         const ans = await CoachesList.updateOne(
+//           { CoachID: CoachID },
+//           {
+//             $set: { Avatar: req.ImgFileData },
+//             $push: {
+//               Updation: [
+//                 {
+//                   ByID: req.user.gid,
+//                   ByName: req.user.name,
+//                   OnDate: new Date(),
+//                   Updates: updatedThings,
+//                 },
+//               ],
+//             },
+//           }
+//         );
+//         return res.status(200).json({ Result: "Photo uploaded successfully" });
+//       }
+//       // asyncCall();
+//       return res.status(200).json({ Result: "Photo uploaded successfully" });
+//     } catch (err) {
+//       console.error(err.message);
+//       return res.status(500).json({ error: "Server Error" });
+//     }
+//   });
+// });
+
 module.exports = router;

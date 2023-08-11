@@ -229,6 +229,7 @@ router.post(
                 id: user.id,
                 gid: user.UserID,
                 name: user.Name,
+                role: user.Role,
               },
             };
             console.log('The Token', payload, process.env.JWTSECRET);

@@ -1,4 +1,4 @@
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
 
 const UserSchema = new mongoose.Schema({
   UserID: {
@@ -9,7 +9,7 @@ const UserSchema = new mongoose.Schema({
   Status: {
     type: String,
     required: true,
-    default: 'Active',
+    default: "Active",
   },
   Name: {
     type: String,
@@ -34,6 +34,50 @@ const UserSchema = new mongoose.Schema({
   Role: {
     type: String,
   },
+  Created: {
+    ByID: {
+      type: String,
+    },
+    ByName: {
+      type: String,
+    },
+    OnDate: {
+      type: Date,
+      default: Date.now,
+    },
+  },
+  Updation: [
+    {
+      ByID: {
+        type: String,
+      },
+      ByName: {
+        type: String,
+      },
+      OnDate: {
+        type: Date,
+        default: Date.now,
+      },
+      Updates: {
+        type: Object,
+      },
+    },
+  ],
+  Deletion: {
+    ByID: {
+      type: String,
+    },
+    ByName: {
+      type: String,
+    },
+    OnDate: {
+      type: Date,
+      // default: Date.now,
+    },
+    DeleteReason: {
+      type: String,
+    },
+  },
 });
 
-module.exports = mongoose.model('user', UserSchema);
+module.exports = mongoose.model("user", UserSchema);

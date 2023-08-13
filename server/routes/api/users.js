@@ -1,179 +1,168 @@
-const express = require('express');
+const express = require("express");
 const router = express.Router();
-const bcrypt = require('bcryptjs');
-const {check, validationResult, Result} = require('express-validator');
+const bcrypt = require("bcryptjs");
+const { check, validationResult, Result } = require("express-validator");
 // const autheticate = require('../../middleware/autheticate');
-const auth = require('../../middleware/auth');
-// const sendMail = require('../../services/emailConfiguration');
+const auth = require("../../middleware/auth");
 // const normalize = require('normalize-url');
 // const authConstantBackend = require('../../authConstants');
-const User = require('../../models/User');
-// const { userSignupEmailBody } = require('../../EmailBody/userSignupEmailBody');
-// const {
-//   userTableAuth,
-//   notificationTableAuth,
-//   notificationSend,
-// } = require('../../constants/userRole');
-const logger = require('../../services/Logger');
-// const uploadController = require('../../middleware/uploadMultipleFiles');
-require('dotenv').config();
+const User = require("../../models/User");
+const uploadController = require("../../middleware/uploadMultipleFiles");
+require("dotenv").config();
 
-// router.post(
-//   '/',
-//   auth,
-//   autheticate('Users', 'Create'),
-//   [
-//     check('name', 'Name is required').not().isEmpty(),
-//     check('password', 'Password is required').not().isEmpty(),
-//     check('email', 'Please include a valid email').isEmail(),
-//     check('mobilenumber', 'Mobile Number is required').not().isEmpty(),
-//   ],
-//   async (req, res) => {
-//     console.log('In user post ');
-//     const errors = validationResult(req);
-//     if (!errors.isEmpty()) {
-//       console.log({errors});
-//       logger.warn('Post request to User Signup - Data is not validated - ', {
-//         by: req.user.gid,
-//         for: [0],
-//         info: {CreatedUser: req.body.email},
-//       });
-//       return res.status(400).json({error: errors.array()[0].msg});
-//     }
-//     const {name, email, mobilenumber, password} = req.body;
+async function getUsersList(req, res) {
+  console.log("In get Users List");
+  let NewList = await User.find({ Status: "Active" }, { _id: 0, Password: 0 });
+  console.log("first", NewList.length);
 
-//     // Password of the user
-//     const status = 'Active';
-//     const updatedBy = [];
-//     let totalNumber = await User.countDocuments();
-//     firstLetter = role.split('')[0];
-//     let onetoOneID = `${firstLetter}-${totalNumber + 121001}`;
-//     try {
-//       let user = await User.findOne({email});
-//       console.log({user});
-//       if (user) {
-//         logger.warn(
-//           'Post request to User Signup - Same user is already Exist',
-//           {by: req.user.gid, for: [0], info: {CreatedUser: email}},
-//         );
-//         return res.status(400).json({error: 'User already exists'});
-//       }
-//       // const avatar = normalize(
-//       //   gravatar.url(email, {
-//       //     s: '200',
-//       //     r: 'pg',
-//       //     d: 'mm'
-//       //   }),
-//       //   { forceHttps: true }
-//       // );
-//       const salt = await bcrypt.genSalt(10);
-//       const hashPassword = await bcrypt.hash(password, salt);
+  return res.status(200).json({ List: NewList });
+}
+router.get("/getuserslist", async (req, res) => {
+  console.log("In request Get Users List ");
+  try {
+    getUsersList(req, res);
+  } catch (err) {
+    // logger.error(`Catch Block - User List Request Block ${err}`, { by: req.user.gid, for: [0], info: {} })
+    console.log("Error ", err);
+    return res.status(500).json({ error: `Server Error: ${err}` });
+  }
+});
 
-//       user = new User({
-//         UserID,
-//         Status,
-//         Name,
-//         Email,
-//         Mobilenumber,
-//         hashPassword,
-//       });
+router.post("/addnewuser", auth, async (req, res) => {
+  console.log("In add new user post request");
+  try {
+    uploadController.multipleUpload(req, res, function (err) {
+      if (err) {
+        console.log("Error Photo Submission", err);
+        return res.end("Error uploading file.");
+      }
+      const data = req.body;
+      console.log("Userss ", data);
+      async function asyncCall() {
+        let totalNumber = await User.countDocuments();
+        totalNumber = totalNumber >= 1 ? totalNumber + 1 : 1;
+        data.UserID = `USR-${totalNumber}`;
+        const password = "Agile@AW20**";
+        const salt = await bcrypt.genSalt(10);
+        data.Password = await bcrypt.hash(password, salt);
 
-//       await user
-//         .save()
-//         .then(() => {
-//           //   if (process.env.NODE_ENV !== 'development') {
-//           //     const senderemailid = 'Head, HR Department  <hr@1to1guru.com>';
-//           //     const receiveremailid = email;
-//           //     const subjectofemail = 'Request to complete your profile';
-//           //     const userSignupEmailContent = userSignupEmailBody(
-//           //       name,
-//           //       email,
-//           //       mobilenumber,
-//           //     );
-//           //     sendMail(
-//           //       senderemailid,
-//           //       receiveremailid,
-//           //       subjectofemail,
-//           //       userSignupEmailContent,
-//           //     )
-//           //       .then((result) => {
-//           //         const notfnMessage = `New user is created. Name: ${name} & Email:${email} & ID :${onetoOneID}`;
-//           //         const notfnByUserName = signby;
-//           //         // const notfnByUserEmail = sign.email;
-//           //         const notfnisRead = 'false';
-//           //         const notfnForUserRole =
-//           //           notificationTableAuth.userAdd.notfnForUserRole;
-//           //         notificationSend(
-//           //           notfnMessage,
-//           //           notfnByUserName,
-//           //           notfnForUserRole,
-//           //         );
-//           //         logger.notify(notfnMessage, {
-//           //           Action: 'NewUserAdd',
-//           //           ActionTakenBy: req.user.gid,
-//           //           NotifyToJobPosition: [0, 1, 2],
-//           //           NotifyToDepartment: [],
-//           //           NotifyToGID: [],
-//           //         });
-//           //         logger.approve(notfnMessage, {
-//           //           Action: 'NewUserAdd',
-//           //           ActionOnUser: onetoOneID,
-//           //           ActionTakenBy: req.user.gid,
-//           //           InformToJobPosition: [0, 1],
-//           //           InformToDepartment: [''],
-//           //         });
-//           //         // logger.notify(notfnMessage, { by: req.user.gid, for: [0, 1, 2], info: { User: onetoOneID } })
-//           //         // logger.info(notfnMessage, { by: req.user.gid, for: [0, 1, 2], info: { User: onetoOneID } })
-//           //         return res.status(200).send({ Result: notfnMessage });
-//           //       })
-//           //       .catch((error) => {
-//           //         logger.error(
-//           //           `Catch Block - User Created But Email not Sent ${error}`,
-//           //           { by: req.user.gid, for: [0], info: { User: onetoOneID } },
-//           //         );
-//           //         return res.json(
-//           //           'User created But due to technical error email NOT sent to the user ',
-//           //         );
-//           //       });
-//           //   } else {
-//           const notfnMessage = `New user is created. Name: ${name} & Email:${email} & ID :${onetoOneID}`;
-//           logger.notify(notfnMessage, {
-//             Action: 'NewUserAdd',
-//             ActionTakenBy: req.user.gid,
-//             NotifyToJobPosition: [0, 1, 2],
-//             NotifyToDepartment: [],
-//             NotifyToGID: [],
-//           });
-//           logger.approve(notfnMessage, {
-//             Action: 'NewUserAdd',
-//             ActionOnUser: onetoOneID,
-//             ActionTakenBy: req.user.gid,
-//             InformToJobPosition: [0, 1],
-//             InformToDepartment: [''],
-//           });
-//           // logger.notify(notfnMessage, { by: req.user.gid, for: [0, 1, 2], info: { User: onetoOneID } })
-//           // logger.info(notfnMessage, { by: req.user.gid, for: [0, 1, 2], info: { User: onetoOneID } })
-//           return res.status(200).send({Result: notfnMessage});
-//           //   }
-//         })
-//         .catch((err) => {
-//           logger.error(
-//             `Catch Block - User Creation and Sending email Block Error ${err}`,
-//             {by: req.user.gid, for: [0], info: {}},
-//           );
-//           console.log({err});
-//           return res.status(500).json({error: 'Server Error'});
-//         });
-//     } catch (err) {
-//       logger.error(`Catch Block - User Signup Form ${err}`, {
-//         by: req.user.gid,
-//         for: [0],
-//         info: {},
-//       });
-//       console.error(err.message);
-//       return res.status(500).json({error: 'Server Error'});
-//     }
-//   },
-// );
+        data.Created = {};
+        data.Created.ByID = req.user.gid;
+        data.Created.ByName = req.user.name;
 
+        FinalData = new User(data);
+        console.log("Final Data", FinalData);
+        await FinalData.save()
+          .then(() => {
+            getUsersList(req, res);
+            // return res.status(200).json({ data: "Success" });
+          })
+          .catch((err) => {
+            console.log("Errot", err);
+            return res.status(500).json({ error: `Problem in Storing to MongoDB: ${err}` });
+          });
+      }
+      asyncCall();
+    });
+  } catch (err) {
+    console.log("Error", err);
+    return res.status(500).json({ error: `Server Error: ${err}` });
+  }
+});
+
+router.delete("/deleteuser/:UserID", auth, async (req, res) => {
+  console.log("In Delete Course", req.params, req.query);
+  try {
+    const deleteUser = req.params.UserID;
+    await User.updateOne(
+      { UserID: deleteUser },
+      {
+        $set: {
+          Status: "Deleted",
+          "Deletion.ByID": req.user.gid,
+          "Deletion.ByName": req.user.gid,
+          "Deletion.OnDate": new Date(),
+          "Deletion.DeleteReason": req.user.gid,
+        },
+      }
+    );
+
+    getUsersList(req, res);
+  } catch (err) {
+    console.log("errr", err);
+    return res.status(500).json({ error: `Server Error: ${err}` });
+  }
+});
+
+router.put("/updateuser/:UserID", auth, async (req, res) => {
+  try {
+    uploadController.multipleUpload(req, res, function (err) {
+      if (err) {
+        console.log("Error Photo Submission", err);
+        return res.end("Error uploading file.");
+      }
+      console.log("In request Update Indiv User Data ", req.params, req.body);
+      async function asyncPutCall() {
+        const UserID = req.params.UserID;
+        const newData = req.body;
+        let oldData = await User.findOne({ UserID });
+        console.log("DDDEEE", oldData, newData);
+        let updatedThings = [];
+        let cnt = 0;
+
+        for (const property in newData) {
+          if (property !== "photoURL")
+            if (`${newData[property]}` !== `${oldData[property]}`) {
+              console.log("DDD", property);
+              updatedThings.push({
+                keyname: property,
+                oldValue: oldData[property],
+                newValue: newData[property],
+              });
+              cnt++;
+            }
+          // updatedString += `${property} : ${oldData[property]} --> ${newData[property]} \n`;
+        }
+        console.log("first", cnt, updatedThings);
+
+        if (cnt > 0) {
+          console.log("To update");
+          await User.updateOne(
+            { UserID: UserID },
+            {
+              $set: newData,
+              $push: {
+                Updation: [
+                  {
+                    ByID: req.user.gid,
+                    ByName: req.user.name,
+                    OnDate: new Date(),
+                    Updates: updatedThings,
+                  },
+                ],
+              },
+            }
+          )
+            .then(async () => {
+              let enterData = await User.findOne({ UserID });
+              console.log("The renter data", enterData);
+              getUsersList(req, res);
+            })
+            .catch((err) => {
+              console.log("errr", err);
+
+              return res.status(500).json({ error: "Server Error" });
+            });
+        } else {
+          return res.json("Nothing to update");
+        }
+      }
+      asyncPutCall();
+    });
+  } catch (err) {
+    console.log("errr", err);
+    // logger.error(`Catch Block - User List Request Block ${err}`, { by: req.user.gid, for: [0], info: {} })
+    return res.status(500).json({ error: `Server Error: ${err}` });
+  }
+});
 module.exports = router;

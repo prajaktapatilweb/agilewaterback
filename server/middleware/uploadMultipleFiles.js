@@ -8,7 +8,7 @@ const multer = require("multer");
 var storage = multer.diskStorage({
   destination: (req, file, callback) => {
     // callback(null, path.join(`${__dirname}/../../upload`));
-    callback(null, 'public/userFileUploads');
+    callback(null, 'public');
   },
   filename: (req, file, callback) => {
     // console.log('Mutter')
@@ -18,10 +18,10 @@ var storage = multer.diskStorage({
       return callback(message, null);
     }
     console.log('Inside Mutter',file)
-    var filename = `${req.user.gid}-${Date.now()}-${file.originalname}`;
+    var filename = `/userFileUploads/${req.user.gid}-${Date.now()}-${file.originalname}`;
     const FileFieldname = file.fieldname;
     // req.uploadedFilLocation = { [FileFieldname]: filename }
-    req[FileFieldname] = filename
+    req.body[FileFieldname] = filename
     callback(null, filename);
   }
 });

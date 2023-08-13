@@ -80,10 +80,10 @@ router.get("/getcoachlist", auth, async (req, res) => {
   console.log("In request Get Coach List ");
   try {
     // updateStatus();
-    // getCoursList(req, res);
-    let NewList = await CoachesList.find({ Status: "Active" });
-    console.log("first", NewList.length);
-    return res.status(200).json({ List: NewList });
+    getCoursList(req, res);
+    // let NewList = await CoachesList.find({ Status: "Active" });
+    // console.log("first", NewList.length);
+    // return res.status(200).json({ List: NewList });
   } catch (err) {
     // logger.error(`Catch Block - User List Request Block ${err}`, { by: req.user.gid, for: [0], info: {} })
     console.log("Error ", err);
@@ -130,13 +130,13 @@ router.post("/addnewcoach", auth, async (req, res) => {
         console.log("Error Photo Submission", err);
         return res.end("Error uploading file.");
       }
-      const CoachID = req.params.ID;
+      // const CoachID = req.params.ID;
       const data = req.body;
       async function asyncCall() {
         let totalNumber = await CoachesList.countDocuments();
         totalNumber = totalNumber >= 1 ? totalNumber + 1 : 1;
         data.CoachID = `ID-${totalNumber}`;
-        data.Avatar = req.Avatar;
+        // data.Avatar = req.Avatar;
 
         data.Created = {};
         data.Created.ByID = req.user.gid;

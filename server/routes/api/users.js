@@ -8,6 +8,7 @@ const auth = require("../../middleware/auth");
 // const authConstantBackend = require('../../authConstants');
 const User = require("../../models/User");
 const uploadController = require("../../middleware/uploadMultipleFiles");
+const FirebaseUser = require("../../models/FirebaseUser");
 require("dotenv").config();
 
 async function getUsersList(req, res) {
@@ -162,6 +163,61 @@ router.put("/updateuser/:UserID", auth, async (req, res) => {
   } catch (err) {
     console.log("errr", err);
     // logger.error(`Catch Block - User List Request Block ${err}`, { by: req.user.gid, for: [0], info: {} })
+    return res.status(500).json({ error: `Server Error: ${err}` });
+  }
+});
+
+router.post("/firebaseuserdata", async (req, res) => {
+  console.log("In add firebase user data");
+  try {
+    const data = req.body.user;
+    console.log("Userss ", data);
+    async function asyncCall(user) {
+      // if (user.lastLoginAt) {
+      // } else {
+      let totalNumber = await FirebaseUser.countDocuments();
+      totalNumber = totalNumber >= 1 ? totalNumber + 1 : 1;
+      var UserID = `FBUSR-${totalNumber}`;
+
+      // console.log("Final Data", FinalData);
+      await FirebaseUser.updateOne(
+        { Email: user.email },
+        {
+          $setOnInsert: {
+            UserID,
+            Name: user?.displayName,
+            Email: user?.email,
+            Mobilenumber: user?.providerData?.phoneNumbr || user?.phoneNumbr,
+            FirebaseProvider: req.body?.providerName ||'UserWithEmailPassword',
+            // LoginData: Date.now(),
+          },
+          $push: { LoginData: Date.now() },
+        },
+        { upsert: true }
+      )
+        .then(() => {
+          // getUsersList(req, res);
+          return res.status(200).json({ data: "Success" });
+        })
+        .catch((err) => {
+          console.log("Errot", err);
+          return res.status(500).json({ error: `Problem in Storing to MongoDB: ${err}` });
+        });
+      // await FinalData.save()
+      //   .then(() => {
+      //     // getUsersList(req, res);
+      //     return res.status(200).json({ data: "Success" });
+      //   })
+      //   .catch((err) => {
+      //     console.log("Errot", err);
+      //     return res.status(500).json({ error: `Problem in Storing to MongoDB: ${err}` });
+      //   });
+      // }
+    }
+    asyncCall(data);
+    // return res.status(200).json({ data: "Success" });
+  } catch (err) {
+    console.log("Error", err);
     return res.status(500).json({ error: `Server Error: ${err}` });
   }
 });

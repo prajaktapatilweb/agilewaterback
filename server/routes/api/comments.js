@@ -5,18 +5,18 @@ const auth = require("../../middleware/auth");
 const Comments = require("../../models/Comments");
 require("dotenv").config();
 
-async function getCommentsList(req, res,PageAsPath) {
-  console.log("In get Comments List");
-  let NewList = await Comments.findOne({ PageAsPath}, { _id: 0 });
-  console.log("first", NewList);
+async function getCommentsList(req, res, PageAsPath) {
+  console.log("In get Comments List",PageAsPath);
+  let NewList = await Comments.findOne({ PageAsPath: PageAsPath }, { _id: 0 });
+  console.log("first");
   return res.status(200).json({ List: NewList });
 }
 
 router.get("/getpagecommentlist/", async (req, res) => {
-    const PageAsPath = req.query.PageAsPath;
-    console.log("In request Get Page Wise comments List ",req.query.PageAsPath);
+  const PageAsPath = req.query.PageAsPath;
+  console.log("In request Get Page Wise comments List ", req.query.PageAsPath);
   try {
-    getCommentsList(req, res,PageAsPath);
+    getCommentsList(req, res, PageAsPath);
   } catch (err) {
     console.log("Error ", err);
     return res.status(500).json({ error: `Server Error: ${err}` });
@@ -28,7 +28,7 @@ router.post("/addnewcomment", async (req, res) => {
   try {
     const data = req.body;
     console.log("Comments ", data);
-    data.Comment.OnDate = Date.now()
+    data.Comment.OnDate = Date.now();
     // return res.status(200).json({ data: "Success" });
     await Comments.updateOne(
       { PageAsPath: data.PageAsPath },
@@ -53,29 +53,48 @@ router.post("/addnewcomment", async (req, res) => {
   }
 });
 
-// router.delete("/deletcomment/:UserID", auth, async (req, res) => {
-//   console.log("In Delete Course", req.params, req.query);
-//   try {
-//     const deleteUser = req.params.UserID;
-//     await User.updateOne(
-//       { UserID: deleteUser },
-//       {
-//         $set: {
-//           Status: "Deleted",
-//           "Deletion.ByID": req.user.gid,
-//           "Deletion.ByName": req.user.gid,
-//           "Deletion.OnDate": new Date(),
-//           "Deletion.DeleteReason": req.user.gid,
-//         },
-//       }
-//     );
+router.put("/FBChangeStatus/:CommentID", async (req, res) => {
+  console.log("In Delete Course", req.params, req.body);
+  try {
+    const PageAsPath = req.body.PageAsPath
+    const CommentID = req.params.CommentID;
+    await Comments.updateOne(
+      { PageAsPath: PageAsPath,'Comments._id': CommentID},
+      {
+        $set: {
+          'Comments.$.Status': 'Deleted',
+        },
+      }
+    );
+    getCommentsList(req, res, PageAsPath);
+  } catch (err) {
+    console.log("errr", err);
+    return res.status(500).json({ error: `Server Error: ${err}` });
+  }
+});
 
-//     getUsersList(req, res);
-//   } catch (err) {
-//     console.log("errr", err);
-//     return res.status(500).json({ error: `Server Error: ${err}` });
-//   }
-// });
+
+router.put("/JWTChangeStatus/:CommentID", auth,async (req, res) => {
+  console.log("In Delete Course", req.params, req.body);
+  try {
+    const PageAsPath = req.body.PageAsPath
+    const CommentID = req.params.CommentID;
+    await Comments.updateOne(
+      { PageAsPath: PageAsPath,'Comments._id': CommentID},
+      {
+        $set: {
+          'Comments.$.Status': req.body.Status,
+          'Comments.$.Approval.By': req.user.gid,
+          'Comments.$.Approval.OnDate': Date.now(),
+        },
+      }
+    );
+    getCommentsList(req, res, PageAsPath);
+  } catch (err) {
+    console.log("errr", err);
+    return res.status(500).json({ error: `Server Error: ${err}` });
+  }
+});
 
 // router.put("/updateuser/:UserID", auth, async (req, res) => {
 //   try {

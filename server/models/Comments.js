@@ -31,6 +31,7 @@ const CommentSchema = new mongoose.Schema({
       },
       ByEmailID: {
         type: String,
+        required:true
       },
       ByName: {
         type: String,

@@ -47,23 +47,12 @@ app.use('/api/comments', require('./server/routes/api/comments'));
 app.use('/api/users', require('./server/routes/api/users'));
 app.use('/api/auth', require('./server/routes/api/auth'));
 
-app.get('/', (req, res) => {
-  res.header('Content-type', 'text/html');
-  return res.end('<h1>I said "Oh my!" What a marvelous tune!!!</h1>');
- });
  app.listen(PORT, (err) => {
   if (err) {
     console.log({err});
   }
   console.log(`Server started on port ${PORT}`);
 });
-// app.use(function (req, res, next) {
-//   //Enabling CORS
-//   res.header("Access-Control-Allow-Origin", "*");
-//   res.header("Access-Control-Allow-Methods", "GET,HEAD,OPTIONS,POST,PUT");
-//   res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept, x-client-key, x-client-token, x-client-secret, Authorization");
-//     next(); 
-//   });
 
 app.get('*', (req, res) => {
   return handle(req, res);

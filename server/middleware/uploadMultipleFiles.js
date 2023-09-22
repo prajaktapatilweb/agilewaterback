@@ -27,7 +27,7 @@ var storage = multer.diskStorage({
 });
 const multipleUpload = async (req, res, next) => {
   try {
-    // console.log('In file upload 1')
+    console.log('In file upload 1')
 
     // var uploadFiles = multer({ storage: storage }).array('file1', 3);
     // var uploadFiles = multer({ storage: storage }).fields([{ name: 'file1', maxCount: 3 }, { name: 'file2', maxCount: 3 }]);
@@ -36,10 +36,10 @@ const multipleUpload = async (req, res, next) => {
     // var uploadFiles = multer({ storage: storage }).fields([{ name: 'FilePhoto', maxCount: 3 }]);
 
     var uploadFilesMiddleware = util.promisify(uploadFiles);
-    // console.log('In file upload 2')
+    console.log('In file upload 2')
 
     await uploadFilesMiddleware(req, res)
-    // console.log('In file upload 3')
+    console.log('In file upload 3')
     if (req.files.length <= 0) {
       return res.send({ Result: 'You must select at least 1 file' });
     }

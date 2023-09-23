@@ -46,6 +46,7 @@ app.use('/api/coaches', require('./server/routes/api/coaches'));
 app.use('/api/comments', require('./server/routes/api/comments'));
 app.use('/api/users', require('./server/routes/api/users'));
 app.use('/api/auth', require('./server/routes/api/auth'));
+app.use("/payment", require("./server/routes/api/payment"));
 
  app.listen(PORT, (err) => {
   if (err) {

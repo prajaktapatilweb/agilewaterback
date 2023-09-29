@@ -9,6 +9,8 @@ const fs = require("fs");
 const parse = require("csv-parse");
 const { header } = require("express-validator");
 var path = require("path");
+const Papa = require("papaparse");
+
 var storage = multer.diskStorage({
   destination: (req, file, callback) => {
     // callback(null, path.join(`${__dirname}/../../upload`));
@@ -44,25 +46,41 @@ const multipleUpload = async (req, res, next) => {
     if (req.files.length <= 0) {
       return res.send({ Result: "You must select at least 1 file" });
     }
-    // return res.send(`Files has been uploaded.`);
-    const data = fs.readFileSync(req.files.FileName[0].path).toString().split("\n");
-    headers = data.shift().split(",");
-    // console.log("DDDD", data, headers);
-    var json = [];
-    data.forEach(function (d) {
-      // Loop through each row
-      tmp = {};
-      row = d.split(",");
-      for (var i = 0; i < headers.length; i++) {
-        tmp[headers[i]] = row[i];
-      }
-      // Add object to list
-      json.push(tmp);
-    });
+
+    const Content = fs.readFileSync(req.files.FileName[0].path, "utf8");
+    const jsonData = Papa.parse(Content, { header: true }).data;
+    console.log("JSong ", jsonData);
+    // Code below is to read csv file data to arry of rows
+    // Papa.parse(Content, {
+    //   header: false,
+    //   skipEmptyLines: false,
+    //   complete: function (results) {
+    //     const rowsArray = [];
+    //     const valuesArray = [];
+    //     results.data.map((d) => {
+    //       rowsArray.push(Object.keys(d));
+    //       valuesArray.push(Object.values(d));
+    //     });
+    //   },
+    // });
+
+    // This below code is for converting csv file to json file but it was creating problem when extra commas in the text
+    // const data = fs.readFileSync(req.files.FileName[0].path).toString().split("\n");
+    // headers = data.shift().split(",");
+    // var jsonData = [];
+    // data.forEach(function (d) {
+    //   tmp = {};
+    //   tmp.options = [];
+    //   row = d.split(",");
+    //   for (var i = 0; i < headers.length; i++) {
+    //     headers[i].length <= 2 ? tmp.options.push(row[i]) : (tmp[headers[i]] = row[i]);
+    //   }
+    //   jsonData.push(tmp);
+    // });
 
     var outPath = path.join(`${req.files.FileName[0].path.slice(0, -3)}json`);
     // Convert object to string, write json to file
-    fs.writeFileSync(outPath, JSON.stringify(json), "utf8", function (err) {
+    fs.writeFileSync(outPath, JSON.stringify(jsonData), "utf8", function (err) {
       console.log(err);
     });
     console.log("Before Next", req.files);

@@ -1,21 +1,61 @@
-﻿QN,Question,A,B,C,D,CorrectOption
-1,What is not correct about ARTs – Agile Release Trains ," Synchronized on a common cadence, a Program Increment", A virtual organization of 5-12 scrum teams, Are organized around the flow of value and continuously delivery value, Aligned to a common mission via a single program backlog,C
-2,Select best matched scaled event with respect to team event., Inspect & Adapt – Iteration retro, PI Planning – Backlog refinement, Inspect & Adapt – Iteration Review, PI planning – prepare for PI planning,C
-3,Strategic Themes influences all the following except?, Portfolio Kanban and Portfolio backlog, Value stream budgets and guardrails, Preparing for PI planning, Portfolio vision,C
-4,"What is the primary purpose of building incrementally with fast, integrated learning cycles?", Integration creates knowledge from uncertainty with faster learning, Provides time and space for creativity, Decentralize decision-making, To increase release frequency,A
-5,What is difference between Cadence and Synchronization?, Both have same meaning and can be used interchangeably, Cadence is used to set release frequency while synchronization is for release on demand, Cadence is used to limit the accumulation of variance and synchronized events are used to facilitate cross-domain trade-offs, Cadence is used at Program Level while Synchronization at Portfolio level,C
-6,"Based on management review and problem-solving meeting during PI planning, following possible changes are discussed. Which one is unlikely change?", Adjustment to vision, Changes to scope, Technical debt prioritization, Movement of people,C
-7,Inspect and Adapt event has three parts. Identify the one which is not part of it., The PI system demo, Quantitative Measurement, Problem-solving workshop, Design Thinking Workshop,D
-8,One of the SAFe principles is “Decentralize decision-making”. Which one of the following is the characteristic of Decentralized decision?, Long-lasting, Time-critical, Unlikely to change at least in short term, Leadership decisions,B
-9,Which is not derived from the principle “Apply Systems Thinking”?, The solution itself is a system, Do not consider the money already spent, The enterprise building the system is a system too, The value of a system passes through its interconnections,B
-10,Which statement is most accurate about PI planning?," If you are not doing it, you are not doing SAFe"," Train everyone, launch trains.", It must be preceded by pre and post PI planning event, Key output of PI planning event is – Team PI objectives and program risks,A
-11,Program risks are discussed and categorized into ROAM. Identify the incorrect category., Resolved, Owned, Assigned, Mitigated,C
-12,Which one is not the SAFe’s four core values?, Program Execution, Transparency, Build-in Quality, Apply Systems Thinking,D
-13,What does Innovation and Planning (IP) iteration enable?, Integrate the complete solution, Buffer time to improve quality, Advance planning for holidays, Time for Retrospective for each team,A
-14,“No useful improvement was ever invented at a desk.” Which of the following best describes this sentence?, Continuous improvement, Embracing Agility, Gemba, Innovation Accounting,C
-15,What is not correct for the “Take an economic view” SAFe principle?, Delivery early and often, Delivery value incrementally, Understand solution economic trade-offs, Work on Shortest Job First (WSJF),D
-16,What is the purpose of “Operational Value Stream”?, Used to build the systems and capabilities, Used to deliver end customer value, Understand the development value stream they support, Help understand Strategy Agility,B
-17,Which of the following is not the responsibilities of System Team?, Create and maintain the continuous delivery pipeline toolchain, Attend other team’s stand-ups to support daily activities, Perform manual testing and run automated tests for new features, Use pairing and other practices for frequent review,D
-18,"With respect to DevOps, which of the following statements are true? A: DevOps is a culture and mindset. B: Improves the Mean Time to Release (MTTR)", Statement A, Statement B, Statement  Both A & B, None,A
-19,What is the advantage of Reducing batch size?, Lower cost, Higher predictability, Higher utilization, Higher variability,B
-20,Which principle most accurately describes – “we cannot possibly know everything at the start”, Take an economic view,Apply systems thinking," Assume variability, preserve options"," Build incrementally with fast, integrated learning cycles",C
+﻿QN,Type,Question,A,B,C,D,E,F,CorrectOption
+1,MCQ,What is not correct about ARTs – Agile Release Trains ," Synchronized on a common cadence, a Program Increment", A virtual organization of 5-12 scrum teams, Are organized around the flow of value and continuously delivery value, Aligned to a common mission via a single program backlog,,,C
+2,MCQ,Select best matched scaled event with respect to team event., Inspect & Adapt – Iteration retro, PI Planning – Backlog refinement, Inspect & Adapt – Iteration Review, PI planning – prepare for PI planning,,,C
+3,MCQ,Strategic Themes influences all the following except?, Portfolio Kanban and Portfolio backlog, Value stream budgets and guardrails, Preparing for PI planning, Portfolio vision,,,C
+4,MCQ,"What is the primary purpose of building incrementally with fast, integrated learning cycles?", Integration creates knowledge from uncertainty with faster learning, Provides time and space for creativity, Decentralize decision-making, To increase release frequency,,,A
+5,MCQ,What is difference between Cadence and Synchronization?, Both have same meaning and can be used interchangeably, Cadence is used to set release frequency while synchronization is for release on demand, Cadence is used to limit the accumulation of variance and synchronized events are used to facilitate cross-domain trade-offs, Cadence is used at Program Level while Synchronization at Portfolio level,,,C
+6,MCQ,"Based on management review and problem-solving meeting during PI planning, following possible changes are discussed. Which one is unlikely change?", Adjustment to vision, Changes to scope, Technical debt prioritization, Movement of people,,,C
+7,MCQ,Inspect and Adapt event has three parts. Identify the one which is not part of it., The PI system demo, Quantitative Measurement, Problem-solving workshop, Design Thinking Workshop,,,D
+8,MCQ,One of the SAFe principles is “Decentralize decision-making”. Which one of the following is the characteristic of Decentralized decision?, Long-lasting, Time-critical, Unlikely to change at least in short term, Leadership decisions,,,B
+9,MCQ,Which is not derived from the principle “Apply Systems Thinking”?, The solution itself is a system, Do not consider the money already spent, The enterprise building the system is a system too, The value of a system passes through its interconnections,,,B
+10,MCQ,Which statement is most accurate about PI planning?," If you are not doing it, you are not doing SAFe"," Train everyone, launch trains.", It must be preceded by pre and post PI planning event, Key output of PI planning event is – Team PI objectives and program risks,,,A
+11,MCQ,Program risks are discussed and categorized into ROAM. Identify the incorrect category., Resolved, Owned, Assigned, Mitigated,,,C
+12,MCQ,Which one is not the SAFe’s four core values?, Program Execution, Transparency, Build-in Quality, Apply Systems Thinking,,,D
+13,MCQ,What does Innovation and Planning (IP) iteration enable?, Integrate the complete solution, Buffer time to improve quality, Advance planning for holidays, Time for Retrospective for each team,,,A
+14,MCQ,“No useful improvement was ever invented at a desk.” Which of the following best describes this sentence?, Continuous improvement, Embracing Agility, Gemba, Innovation Accounting,,,C
+15,MCQ,What is not correct for the “Take an economic view” SAFe principle?, Delivery early and often, Delivery value incrementally, Understand solution economic trade-offs, Work on Shortest Job First (WSJF),,,D
+16,MCQ,What is the purpose of “Operational Value Stream”?, Used to build the systems and capabilities, Used to deliver end customer value, Understand the development value stream they support, Help understand Strategy Agility,,,B
+17,MCQ,Which of the following is not the responsibilities of System Team?, Create and maintain the continuous delivery pipeline toolchain, Attend other team’s stand-ups to support daily activities, Perform manual testing and run automated tests for new features, Use pairing and other practices for frequent review,,,D
+18,MCQ,"With respect to DevOps, which of the following statements are true? A: DevOps is a culture and mindset. B: Improves the Mean Time to Release (MTTR)", Statement A, Statement B, Statement  Both A & B, None,,,A
+19,MCQ,What is the advantage of Reducing batch size?, Lower cost, Higher predictability, Higher utilization, Higher variability,,,B
+20,MCQ,Which principle most accurately describes – “we cannot possibly know everything at the start”, Take an economic view,Apply systems thinking," Assume variability, preserve options"," Build incrementally with fast, integrated learning cycles",,,C
+21,MCQ,Which one is NOT a scaling framework?, Daily Scrum, Scrum@Scale, LeSS, Nexus, SAFe,,A
+22,MCQ,RTE is -, Release Train Engineer, Release Train Expert, Release Test Engineer, Reliable Test Engineer,,,A
+23,MCQ,Minimum frequency of Delivery/Release expectation in SAFe is at atleast -, Every Week., Every month., Every PI (Program Increment), Every quarter.,,,C
+24,MCQ,System Team in an ART performs -, building and using the Agile development environment infrastructure, integrating assets from Agile teams, assists in building and supporting the Agile development environment, All of the above,,,C
+25,MCQ,What is the allowed no. of people in an Agile Team in SAFe?, 3 to 9, 5 to 9, 3 to 11, 5 to 11,,,B
+26,MCQ,Who all from below are NOT participants of PI Planning Meeting?, Business Owners, RTE & Scrum Masters, Dev Teams, UX & Architect Teams, Product Management, None of the above,F
+27,MCQ,Last Iteration in a PI is typically -, Planning & Innovation Iteration, Innovative Planning Iteration, Innovation & Planning Iteration, Intensive Planning Iteration,,,C
+28,MCQ,The Release Train Engineer (RTE) is a ______ and _____ for the Agile Release Train (ART)., Scrum Master - Facilitator, Servant Leader - Program Manager, Servant Leader - Coach, Program Manager - Facilitator,,,C
+29,MCQ,Which one is NOT one of Seven Core Competencies of the Lean Enterprise defined by SAFe -, Continuous Learning Culture, Organisational Agility, Team and Technical Agility, Agile Product Delivery, Leadership Agility, Lean Agile Leadership,E
+30,MCQ,Which one of below is NOT a Scrum Master responsibility?, Facilitates team meetings., Eliminates or help eliminate impediments., Promotes SAFe quality practices., Supports the Product Owner in their efforts to manage the backlog., Manage Development Team.,,E
+31,MCQ,The Team Backlog contains user and enabler Stories that originate from the ART Backlog & stories that arise from local context of the team., True, False,,,,,A
+32,MCQ,Backlog for Essential SAFe is called as, ART Backlog, Essential Backlog, Iteration Backlog, Sprint Backlog,,,A
+33,MCQ,Total number of teams and people in Essential SAFe are -, 4 to 12 Teams and 100 to 125 People, 5 to 12 Teams and 100 to 150 People, 5 to 12 Teams and 50 to 125 People, 5 to 15 Teams and 100 to 150 People,,,C
+34,MCQ,PI - Program Increment is typically consists -, 8 to 10 weeks duration, 5 Iterations, 2 Days PI Planning, All of the Above,,,D
+35,MCQ,What is full form of SoS in scaling scrum terminology?,What is full form of SoS in scaling scrum terminology?, Scrum of Scrums, Scrum Master of Scrum, Scrum of Scrum Masters, Scrum of Many Scrums,,A
+36,MCQ,Program Increment (PI) Planning is a cadence-based event that serves as the heartbeat of the ________________ ., Scrum of Scrum, Program Increment, Agile Release Train (ART), Iterations,,,C
+37,MCQ,Which one of following is not a SAFe Value?, Transparency, Inspection, Alignment, Built in Quality, Program Execution,,A
+38,MCQ,Which one is the smallest configuration of SAFe?, Large Solution, Essential, Full, Portfolio,,,B
+39,MCQ,SAFe is an, Agile Process, Agile Framework, Agile Methodology, Agile & Scrum Methodology,,,B
+40,MCQ,In SAFe you can NOT deliver/release to market before a PI is over. (True/False), True, False,,,,,B
+41,MCQ,Which one is the smallest configuration of SAFe?, Large Solution, Full, Essential, Portfolio,,,B
+42,MCQ,Total number of teams and people in Essential SAFe are -, 4 to 12 Teams and 100 to 150 People, 5 to 12 Teams and 100 to 150 People, 5 to 12 Teams and 100 to 125 People, 5 to 15 Teams and 100 to 150 People,,,C
+43,MCQ,Extension of RTE is, Release Train Engineer, Release Train Expert, Release Test Engineer, Reliable Test Engineer,,,A
+44,MCQ,What is the allowed no. of people in an Agile Team in SAFe?, 3 to 9, 5 to 9, 3 to 11, 5 to 11,,,D
+45,MCQ,Backlog for Essential SAFe is called, Essential Backlog, Iteration Backlog, Program Backlog, Sprint Backlog,,,C
+46,MCQ,Program Increment (PI) Planning is a cadence-based event that serves as the heartbeat of the ________________ ., Scrum of Scrum, Program Increment, Agile Release Train (ART), Iterations,,,C
+47,MCQ,Which one is NOT one of Seven Core Competencies of the Lean Enterprise defined by SAFe -, Continuous Learning Culture, Organisational Agility, Team and Technical Agility, Agile Product Delivery, Leadership Agility, Lean Agile Leadership,E
+48,MCQ,Standard PI - Program Increment (PI) has -, 8 to 12 weeks duration, 5 Iterations, 2 Days PI Planning, All of the above,,,D
+49,MCQ,Last Iteration in a PI is typically -, Planning & Innovation Iteration, Innovative Planning Iteration, Innovation & Planning Iteration, Intensive Planning Iteration,,,C
+50,MCQ,SAFe is an, Agile Process, Agile Framework, Agile Methodology, Agile & Scrum Methodology,,,B
+51,MCQ,Minimum frequency of Delivery/Release expectation in SAFe is at atleast -, Every Week., Every month., Every PI (Program Increment), Every quarter.,,,C
+52,MCQ,In SAFe you can NOT deliver/release to market before a PI is over. (True/False), True, False,,,,,B
+53,MCQ,Which one of below is NOT a Scrum Master responsibility?, Facilitates team meetings., Eliminates or help eliminate impediments., Promotes SAFe quality practices., Supports the Product Owner in their efforts to manage the backlog., Manage Development Team.,,E
+54,MCQ,Who all from below are NOT participants of PI Planning Meeting?, Business Owners, RTE & Scrum Masters, Agile Teams, Product Management, UX & Architect Teams, None of the above,F
+55,MCQ,WSJF in SAFe is, Wait Shortest Job First, Weighted Shortest Job First, Weigh the Shortest Job First, None of the above,,,B
+56,MCQ,WSJF does NOT consider following while calculating ranking, CoD - Cost of Delay, Job Size, CoD - Cost of Development, Time Criticality,,,C
+57,MCQ,System Team is responsible for -, System and Solution Demos, End to End Testing, Solution Integration, Building Development Infrastructure, All of the above,,E
+58,MCQ,SAFe Does NOT have Iteration Demos., True, False,,,,,B
+59,MSQ,I&A (Inspect & Adapt) Event consists of following 3 parts (Choose 3), Innovation & Planning, Quantitative & Qualitative Measurement, Retrospective and Problem Solving Workshop, PI System Demo,,,B C D
+60,MCQ,Program risks are discussed and categorized into ROAM. Identify the incorrect category., Resolved, Owned, Assigned, Mitigated,,,C

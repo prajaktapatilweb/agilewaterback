@@ -188,7 +188,7 @@ router.post("/firebaseuserdata", async (req, res) => {
             Name: user?.displayName,
             Email: user?.email,
             Mobilenumber: user?.providerData?.phoneNumbr || user?.phoneNumbr,
-            FirebaseProvider: req.body?.providerName ||'UserWithEmailPassword',
+            FirebaseProvider: req.body?.providerName || "UserWithEmailPassword",
             // LoginData: Date.now(),
           },
           $push: { LoginData: Date.now() },
@@ -221,4 +221,55 @@ router.post("/firebaseuserdata", async (req, res) => {
     return res.status(500).json({ error: `Server Error: ${err}` });
   }
 });
+router.put("/firebaseuserupdates", async (req, res) => {
+  console.log("In add firebase user updating data", req.body);
+  try {
+    async function asyncCall(req) {
+      const email = req.body.email;
+      const submitData = req.body.Updates;
+      console.log("Userss ", submitData);
+      await FirebaseUser.updateOne(
+        { Email: email },
+        {
+          $set: submitData,
+        }
+      )
+        .then(() => {
+          async function getUser(email) {
+            console.log("In get Users List");
+            const b = await FirebaseUser.find({ Email: email });
+            console.log("first", b);
+          }
+          getUser(email);
+          console.log("Afer submit");
+          return res.status(200).json({ data: "Success" });
+        })
+        .catch((err) => {
+          console.log("Errot", err);
+          return res.status(500).json({ error: `Problem in Storing to MongoDB: ${err}` });
+        });
+    }
+    asyncCall(req);
+    // return res.status(200).json({ data: "Success" });
+  } catch (err) {
+    console.log("Error", err);
+    return res.status(500).json({ error: `Server Error: ${err}` });
+  }
+});
+
+async function getUsersList(req, res) {}
+router.get("/getfirebaseuserupdates", async (req, res) => {
+  console.log("In request Get Firebase Users List ",req.query);
+  try {
+    console.log("In get Firebase Users List");
+    let userData = await FirebaseUser.findOne({Email: req.query.email });
+    console.log('UUUU',userData)
+    return res.status(200).json(userData);
+  } catch (err) {
+    // logger.error(`Catch Block - User List Request Block ${err}`, { by: req.user.gid, for: [0], info: {} })
+    console.log("Error ", err);
+    return res.status(500).json({ error: `Server Error: ${err}` });
+  }
+});
+
 module.exports = router;

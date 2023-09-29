@@ -1,0 +1,61 @@
+﻿QN,Type,Question,A,B,C,D,E,F,CorrectOption
+1,MCQ,"After the Product Backlog has been created by the Product Owner at the beginning of a new project, items cannot be added, removed, or changed.", True, False,,,,,B
+2,MCQ,All communication between the Dev Team and Product Owner is required to go through the Scrum Master., True, False,,,,,B
+3,MCQ,Product Backlog Items the Dev Team does not complete in a Sprint automatically get added to the next Sprint. , True, False,,,,,B
+4,MCQ,"During the Sprint, Dev Team members can decide to switch tasks with each other. ", True, False,,,,,A
+5,MCQ,"“Cross-functional” means everyone on the Dev Team is required to have all the skills – design, coding, testing, etc.", True, False,,,,,B
+6,MCQ,"It is recommended that the Sprint Review be attended by the Dev Team, Product Owner, Scrum Master, as well as other stakeholders (like customers or end-users).", True, False,,,,,A
+7,MCQ,"In Scrum, testing is mostly done in the final phase of the project, just before the release.", True, False,,,,,B
+8,MCQ,"When a Dev Team sets a goal for a Sprint, they’re not making a promise about what they’ll complete – they’re making a commitment to do their best.", True, False,,,,,A
+9,MCQ,"In Scrum, the product must be of potentially shippable “doneness” and quality at the end of every Sprint, but it only ships when the Product Owner feels the timing is  right and it is feature- complete enough to ship.", True, False,,,,,A
+10,MCQ,"In Scrum, the architecture of the system is finalized at the very beginning of the project.", True, False,,,,,B
+11,MCQ,It is recommended that management attend the Daily Scrum Meeting., True, False,,,,,B
+12,MCQ,"In Scrum, most of the testing is done during each Sprint, to ensure defects are found and fixed as early as possible.", True, False,,,,,A
+13,MCQ," In the Sprint Retrospective the Dev Team, Scrum Master and Product Owner discuss how to improve their practices and way of working.", True, False,,,,,A
+14,MCQ,"It is recommended that customers, end users, and other stakeholders be invited to the Sprint Review.", True, False,,,,,A
+15,MCQ,Items at the top of the Product Backlog are usually sliced smaller and have more details than those at the bottom., True, False,,,,,A
+16,MCQ,"It is recommended that the Sprint Review be limited just to the Product Owner, Dev Team and Scrum Master.", True, False,,,,,B
+17,MCQ,"Scrum recommends that no documentation be completed, because time spent on it is wasteful.", True, False,,,,,B
+18,MCQ,The “Definition of Done” is different for every single Product Backlog Item., True, False,,,,,B
+19,MCQ,The “Definition of Done” is decided solely by the Product Owner., True, False,,,,,B
+20,MCQ,Dev Team members are only required to go to the Daily Scrum Meeting if they have blocks to report., True, False,,,,,B
+21,MCQ,A key principle of Scrum is its recognition that during a project __________% Of requirements changes.,05-Oct,15-30,20-30,60-65,,,D
+22,MCQ,What if when Scrum Master is not available for a sprint? (Best possible answer from options below), The sprint may not meet the expectations, The sprint won't be able to deliver any value, The sprint will not happen, Someone/few from team can assume the responsibilities of the Scrum Master.,,,D
+23,MCQ,Scrum Describes_________approach in project management., Customized, Centralized approach, Iterative & Incremental, All The Above,,,C
+24,MCQ,Where are the customer requirement stored?, In the Product Backlog, In the Spring Backlog, In a Database, In a Scrum product Requirement specification,,,A
+25,MCQ,Where can scrum be used?, Managing the scrum Operation of an organization, Development and sustaining of cloud and operational environment," Research & identifying of variable market, technologies and product capabilities", All of the above,,,D
+26,MCQ,_____ identifies the business value of a feature within the scrum project., End users, Business Sponsors, The Product Owner, Internal Customer,,,C
+27,MCQ,Which of the following options is NOT completely true?," The Scrum Master has no authority over Scrum team members, but that authority is granted by the team."," If needed, the Scrum Master will work with the Product Owner to make sure the Product Backlog is in good shape and ready for the next sprint."," The Scrum Master role is commonly filled by a former project manager or a technical team leader, but can be anyone.", Changing Scrum Masters midstream a project will encourage self- empowerment of the Development Team.,,,D
+28,MCQ,"A team member is consistently late for Daily Scrum, what is usually the first thing a Team should do?", Report the team to his/her manager, Have the team member do the testing, Meet the team member to determine a solution, Ask the Scrum Master to move the Team member off the Team,,,C
+29,MCQ,Who should define the business value of a feature within the scrum project ?, The Individual end –users, The Product Owner, The Business Analyst, The Business Sponsored,,,B
+30,MCQ,The Scrum Framework encompasses rules of guidelines for documentations?,TRUE,FALSE,,,,,B
+31,MCQ,When is the most possible event from below for Development Team to discuss about changing the definition of “Done”?, During Sprint Retrospective, During Sprint Planning Meeting, Prior to starting a new Sprint, Prior to starting a new Project,,,A
+32,MCQ,"From the events given below, which is the third event in sequence of the Sprint in chronology?", Daily scrum, Sprint retrospective, Sprint planning, Sprint Review,,,D
+33,MCQ,Which one of below is NOT a Value mentioned in agile manifesto?, Individuals and interactions over processes and tools, Working software over comprehensive documentation, Processes over people, Customer collaboration over contract negotiation, Responding to change over following a plan,,C
+34,MCQ,Can one person be both product owner and the scrum master?," No, the SM and PO responsibilities are in conflict"," No, it would be too much work for one person"," Yes, it can be done"," Yes, as long as a person can justify both the responsibilities",,,A
+35,MCQ,Who is responsible for the scope VS schedule trade-off decisions?, The Project Manager, The Product Owner, The Development Team, The Scrum Master,,,B
+36,MCQ,"In Scrum, list of requirements of the product is referred as -", Stand Up Meeting, Sprint planning, Sprint retrospective, Product backlog,,,D
+37,MCQ,The Product Owner role and Scrum Master role are never included in the Development Team size count,TRUE,FALSE,,,,,A
+38,MCQ,Which of the following is delivered at the end of the Sprint?, A document containing test cases for the current sprint, An architectural design of the solution, An increment of Done software, Wireframes designs for User Interface,,,C
+39,MCQ,What is the primary purpose of the Scrum Master at the Daily Scrum?, Register impediments to be solved later, Ensure the three questions are answered, Prevent interruptions, Manage the Time Box,,,A
+40,MCQ,Which of the following activity is not timeboxed?, Sprint Retrospective, Sprint, Product Backlog Refinement, Daily Scrum, Sprint Review,,C
+41,MCQ,Which one of the following is not a Scrum Artifact?, Product Backlog, Story, Sprint Backlog, Increment of Potentially Shippable Product Functionality,,,B
+42,MCQ,Which of the following meetings is not part of Scrum?, Sprint review meeting, Sprint planning meeting, Sprint retrospective meeting, Product review meeting,,,D
+43,MCQ,What is the Standard duration of a sprint in Scrum as per Scrum Guide?, 1 month or less, 28-30 days, Anything between 2 - 6 weeks, 30 days,,,A
+44,MCQ,Which of the following questions is not relevant for a Daily Scrum Meeting?, What have you done since the last Daily Scrum regarding this project?, What will you do between now and the next Daily Scrum meeting regarding this project?, How did you solve the problem - share knowledge Please?, What impedes you from performing your work as effectively as possible?,,,C
+45,MCQ,What is a Burndown Graph?, A Sprint plan which is burned to celebrate successful completion of Sprint," The trend of work remaining across time in a Sprint, a release, or a product"," The trend of work accomplished across time in a Sprint, a release, or a product", Graph to measure human Burnout effect due to fast pace of sprint,,,B
+46,MCQ,What is the correct numbering sequence for Story Points estimation with Fibonacci?," 1,2 3,4,5,6,7,8"," 1,3,5,8,13"," 1,2,3,5,8,16"," 1,2,3,5,8,13",,,D
+47,MCQ,What all tasks should be completed by the end of a Sprint to call Product Backlog Item (PBI) Done?, All of the tasks that have been defined in DoD (Definition of Done), Reviewed by the Product Owner, Testing the Stories, Writing the Code,,,A
+48,MCQ,Scrum's foundation is based on what process model?, Iterative, Transparent, Adaptive, Empirical,,,D
+49,MCQ,What is the main purpose of the Daily Standup?, Inspect progress toward the Sprint Goal & adjust the upcoming planned work, Report progress to the Product Owner, Ensure that everyone is working on Sprint tasks, Report progress to the Scrum Master,,,A
+50,MCQ,Scrum was created by these 2 people., Mark Zuckerbert & Eduardo Saverin, Ken Schwaber & Jeff Sutherland, Ken Sutherland & Jeff Schwaber, Bill & Melinda Gates,,,B
+51,MCQ,What is the best reason that story tasks are broken into hours of 6 or less?, There are meetings that take up the rest of the day, Smaller sized task estimates are more accurate than longer tasks, So a developer can have frequent inspection of their work, You can only get that much done in a day,,,B
+52,MCQ,Which of these is not a responsibility of the Scrum Master?, Scrum Process Training, Removing Team Impediments, Organizing Scrum Events, Organizing the Backlog,,,D
+53,MCQ,What is the main difference between Waterfall and Agile?, Waterfall and Agile are mostly the same with the exception that there are sprints in Agile, In Waterfall there are specifications but Agile does not require this, Waterfall you inspect frequently but in Agile you don't inspect until after a sprint, Waterfall expects all requirements to be exactly defined but Agile anticipates change during development.,,,D
+54,MCQ,What does the Product Owner do during a Sprint?, Intervenes when required to make sure the pace of work is sustainable, Clarifies requirements and answers questions, Protects the Dev Team and the process, Guides the Dev Team in its work,,,B
+55,MCQ,"In a 30-day Sprint, how long is the Sprint Review Meeting?", Maximum Four hours, Four to eight hours, At least eight hours, As long as required,,,A
+56,MCQ,Must the Product Owner be present at the Sprint Retrospective?, It is optional. Attendance is only required when the Product Owner gets invited by the Scrum Master., It is mandatory. The Sprint Retrospective is an opportunity for the Scrum Team to assess its performance and improve itself., It is not allowed. The Sprint Retrospective is an opportunity for the Dev Team to inspect itself., None of these,,,B
+57,MCQ,Which of the following best describes the purpose of a retrospective meeting?, To help the customers understand how the Dev Team works, To help the managers determine whom to reward and whom to penalize, To help the Product Owner prioritize items for the next Sprint, To help the Dev Team 'inspect and adapt',,,D
+58,MCQ,The outputs of a Sprint Planning session are:, Product backlog, Product Increment, Sprint backlog, Sprint Goal,,,C
+59,MCQ,What are the three components of an empirical process?," Feedback, courage, and simplicity"," Planning, taking action, and checking for quality"," Planning, committing, and measuring"," Transparency, inspection, and adaptation",,,D
+60,MCQ,"Once a team starts a Sprint, who determines how the team does its work?", Team lead, Project Manager, ScrumMaster, Team,,,D

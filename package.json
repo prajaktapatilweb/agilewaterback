@@ -28,6 +28,7 @@
     "next-transpile-modules": "^10.0.0",
     "nextjs-cors": "^2.1.2",
     "nodemon": "^2.0.21",
+    "papaparse": "^5.4.1",
     "rate-limiter-flexible": "^2.4.1",
     "razorpay": "^2.9.2",
     "react": "^18.2.0",

@@ -1,3 +1,31 @@
-Question Number, Question, Option#1, Option#2, Option#3, Option#4, Correct Option Column Heading
-1,Qurstion 1How are you ?,Good,Best ,Fine ,Well,2
-2,What are the datatypes available in C language,Integer,Real,ABC,XYX,1
+﻿QN,Type,Question,A,B,C,D,E,F,CorrectOption
+1,MCQ,What is the first step in any Kanban Implementation, Implement F/B loop, Manage Flow, Limit WIP, Define explicit policies, Visualize,,E
+2,MCQ,How many requirements are in all released before 30-Jan-20?,44,35,32,25,,,D
+3,MCQ,Who amongst the below mentioned AgileWaters Trainers & Coaches is CERTIFIED Kanban as well as SAFe Trainer? (Hint 1st Page), Jeff Lopez (US & India," Vijay Wade (Asia ,Europe & USA)", Edson Fonsceca (Mexico), Mandar (USA), Amogh (UK),,B
+4,MCQ,How many requirements/tickets are in Design on 15-Jan?,3,17,27,37,,,A
+5,MCQ,What statement below is correct about PULL?, I only assign work when there is capacity, If there is more inflow I increase capacity as and when required, I don’t PUSH tickets/requirements to next level, I don’t have WIP Limit,,,A
+6,MCQ,What is the Full Form of CFD?, Cumulative Frequency Diagram, Cumulative Flow Diagram, Cross Frequency Diagram, Current Frequency Diagram,,,B
+7,MCQ,What is the benefit of managing flow?, reduction in throughput, More & more Resource utilisation, Flow gets smoother over time, We can handle more work in parallel,,,C
+8,MCQ,What is Class of Service?, prioritization of work types, a set of policy applying to a category of work, a sonic screwdriver, an contractual obligation made to the customer,,,B
+9,MCQ,What issue you can make out from above CFD of Kanban system?, PULL mechanism is not implemented (not visible), PUSH mechanism is implemented., WIP not implemented., Bottlenecks are not experienced.,,,A
+10,MCQ,How does Kanban use evolutionary change?, Enables us to make big changes quickly, Helps us install a pre-designed Kanban process.," Uses understanding and agreement, based on respect", Encourages big bang changes,,,C
+11,MCQ,What is Feedback Loop in the Kanban Method?, Kanban Meeting and Board, Refinement meeting, Kanban Board Tickets, Class of Service,,,A
+12,MCQ,On any given day – what is the minimum difference in Backlog & Released requirements?,4,9,18,25,30,,C
+13,MCQ,How many requirements are completed on 29-Jan-20?,12,17,25,32,44,,D
+14,MCQ,Full form of SSSF, Standard Safe Sequence & Frequency, Sequential & Serial Subjective Function, Stop Starting Start Finishing, Suboptimal Solution for Standardized Function,,,C
+15,MCQ,Is the Flow Laminar?, Yes,No, Can’t say from given data,,,,B
+16,MCQ,"What all Certifications are provided by AgileWaters Consulting under Kanban? (1. TKP,2-KMP1(Kanban System Design), 3-KMP2 – Kanban Management Professional, 4. KP- Kanban Practitioner)", 1 & 2, 2 & 3," 1, 2 & 3", 1 & 4, Non of the above,,C
+17,MCQ,What is the Release frequency in above graph?, Daily, Weekly, Fortnightly, Monthly, None of the above,,C
+18,MCQ,Reduction in batch size increases Flow, True, Always True, Mostly, False,,,C
+19,MCQ,Which of the following statement is TRUE about requirements in Coding?, There are less requirements in coding on 15-Jan than 22-Jan., There are more requirements on 15-Jan than 22-Jan., There are equal requirements on 15-Jan & 22-Jan., Above statements can’t be justified from given data.,,,D
+20,MCQ,What is the frequency of Backlog replenishment (Update)?, Daily, Weekly, Fortnightly, Monthly,,,B
+21,MCQ,What is the end measurement point of System Lead time?, column where work gets delivered to customer, last unbounded queue, first unbounded queue, deployment column,,,C
+22,MCQ,What is flow efficiency?, effort spent on item, Ratio of time work is actually in progress vs. waiting, Time spent waiting in queues, a key metric of flow,,,D
+23,MCQ,What is Class of Service?, prioritization of work types, a set of policy applying to a category of work, a sonic screwdriver, an contractual obligation made to the customer,,,B
+24,MCQ,What is Feedback Loop in the Kanban Method?, Kanban Meeting and Board, Prioritization meeting, Flow metrics, Service Delivery Review,,,A
+25,MSQ,What is the benefit of managing flow?, More throughput, Better predictability, Flow gets smoother over time, We can handle more work in parallel,,,B C
+26,MCQ,What is the essence of Kanban in Action?, Deliver faster!, Provoking conversation that leads to change, Having an elaborate board with all information present, Empower teams,,,B
+27,MCQ,What is 2-phase commitment( or de-coupled commitment)?, Can replenish and deliver at different frequencies, Commitment point and the delivery point are not connected, We can reverse our commitment on items we have started, We have more than one commitment and delivery points,,,A
+28,MCQ,"What does this mean: ""SLA expectation of 105 days with 98% on-time""", The customer should not expect to get anything delivered., We deliver everything in 98% of 105 days, We have estimated that we can deliver 98% within 105 days., We promise to deliver within 105 days. We are 98% confident.,,,D
+29,MCQ,What is Capacity Allocation?, Gives guidance where to spent which share of time and energy, Allocates capacity to team members, Policy re share of capability allotted to a category of work, Tells us who is paying which part of the budget,,,A
+30,MCQ,How does Kanban use evolutionary change?, Enables us to make big changes quickly, Helps us install a pre-designed Kanban process.," Uses understanding and agreement, based on respect", Encourages small deliberate changes,,,C

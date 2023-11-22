@@ -257,7 +257,7 @@ router.put("/firebaseuserupdates", async (req, res) => {
   }
 });
 
-async function getUsersList(req, res) {}
+// async function getUsersList(req, res) {}
 router.get("/getfirebaseuserupdates", async (req, res) => {
   console.log("In request Get Firebase Users List ",req.query);
   try {

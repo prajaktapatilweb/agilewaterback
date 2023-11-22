@@ -4,7 +4,7 @@ const logger = require('../services/Logger');
 // const config = require('config');
 
 module.exports = function (req, res, next) {
-  console.log('Auth Middleware');
+  console.log('Auth Middleware',req.baseUrl);
   // Get token from header
   // const token1 = req.headers.authtoken;
   const token = req.headers.authorization;

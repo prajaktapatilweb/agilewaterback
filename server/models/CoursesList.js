@@ -39,6 +39,29 @@ const CoursesListSchema = new mongoose.Schema({
   EventDeleteDate: {
     type: Date,
   },
+  PaymentTypes: [
+    {
+      ConcessionType: {
+        type: String,
+      },
+      Amount: {
+        type: Number,
+      },
+      CloseDate: {
+        type: Date,
+      },
+      DiscountCoupon: [
+        {
+          Title: {
+            type: String,
+          },
+          Percentage: {
+            type: Number,
+          },
+        },
+      ],
+    },
+  ],
   Created: {
     ByID: {
       type: String,

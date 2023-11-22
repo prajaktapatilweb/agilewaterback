@@ -1,10 +1,10 @@
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
 
 const CoachesListSchema = new mongoose.Schema({
   Status: {
     type: String,
     required: true,
-    default: 'Active',
+    default: "Active",
   },
   CoachID: {
     type: String,
@@ -14,6 +14,7 @@ const CoachesListSchema = new mongoose.Schema({
   CoachName: {
     type: String,
     required: true,
+    unique: true,
   },
   Experience: {
     type: Number,
@@ -21,11 +22,14 @@ const CoachesListSchema = new mongoose.Schema({
   Country: {
     type: String,
   },
-  Specialization:{
-    type:Array
+  Summary: {
+    type: String,
   },
-  Expertise:{
-    type:Array
+  Specialization: {
+    type: Array,
+  },
+  Expertise: {
+    type: Array,
   },
   Avatar: {
     type: String,
@@ -76,4 +80,4 @@ const CoachesListSchema = new mongoose.Schema({
   },
 });
 
-module.exports = mongoose.model('coachlist', CoachesListSchema);
+module.exports = mongoose.model("coachlist", CoachesListSchema);

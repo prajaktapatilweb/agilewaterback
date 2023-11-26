@@ -14,15 +14,20 @@ const PayOrderSchema = new mongoose.Schema({
   offer_id: { type: String },
   status: { type: String },
   attempts: { type: Number },
-  razorpayPaymentId:{type: String },
-  razorpaySignature:{type: String },
+  razorpayPaymentId: { type: String },
+  razorpaySignature: { type: String },
   notes: {
     CourseID: { type: String },
-    PaymentType: { type: String },
+    RegisterdPersonTotal:{type:Number},
     DiscountCoupon: { type: String },
+    PartcipantFirstName: { type: String },
   },
   created_at: { type: Number },
   updated_at: { type: Date },
+  CourseID:{ type: String },
+  PayTypeID:{type:Array},
+  PartcipantDetails:{type:Array},
+  GSTDetail:{type:Object}
 });
 
 module.exports = mongoose.model("payorder", PayOrderSchema);
